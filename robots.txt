@@ -1,0 +1,24 @@
+# Faraway & Fine™ — Test Site
+# This is a fictional test website for LLM discoverability research.
+# All crawlers are welcome.
+
+User-agent: *
+Allow: /
+
+# LLM-specific directives (experimental)
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+Sitemap: https://faraway-and-fine-test.github.io/sitemap.xml
