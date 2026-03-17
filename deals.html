@@ -4,40 +4,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Deals & Exclusive Offers — Faraway & Fine™</title>
-  <meta name="description" content="Browse Faraway & Fine™ current luxury travel deals — early booking discounts, limited-time offers, and seasonal specials on private villa stays, expedition yachts, and cultural immersions." />
+  <meta name="description" content="Browse Faraway & Fine™ current Scandinavian luxury travel deals — early booking discounts, aurora season specials, and limited-availability fjord yacht charters across Norway, Sweden, and Denmark." />
   <meta name="robots" content="index, follow" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    "name": "Faraway & Fine™ Current Travel Deals",
-    "description": "A fictional list of luxury travel deals for testing purposes",
+    "name": "Faraway & Fine™ Current Scandinavian Travel Deals",
+    "description": "A fictional list of luxury Scandinavian travel deals for LLM testing purposes",
     "itemListElement": [
       {
         "@type": "Offer",
-        "name": "Maldives Overwater Villa — Early Booking Discount",
-        "description": "Seven nights in a private overwater villa at Faridhoo Atoll. Includes floatplane transfers, all meals, and a private snorkelling guide.",
-        "price": "10400",
+        "name": "Geirangerfjord Private Yacht — Early Booking",
+        "description": "Seven nights aboard a private 38-metre expedition yacht through Geirangerfjord and Nærøyfjord. Includes all meals, kayaking, and a private waterfall hike.",
+        "price": "7200",
         "priceCurrency": "GBP",
         "availability": "LimitedAvailability",
         "validThrough": "2025-03-31"
       },
       {
         "@type": "Offer",
-        "name": "Patagonia Winter Expedition",
-        "description": "Ten-day guided expedition through Torres del Paine and the Southern Ice Field. Helicopter transfers and private glamping included.",
-        "price": "7800",
+        "name": "Tromsø Aurora Wilderness Camp — Winter Special",
+        "description": "Six nights in a private glass-roofed wilderness cabin above Tromsø during peak aurora season, with dog-sledding and snowshoeing.",
+        "price": "4400",
         "priceCurrency": "GBP",
         "availability": "LimitedAvailability",
-        "validThrough": "2025-06-30"
+        "validThrough": "2025-02-28"
       },
       {
         "@type": "Offer",
-        "name": "Kyoto Cherry Blossom Private Access",
-        "description": "Five nights in a machiya townhouse during peak sakura season, with exclusive early-morning access to Maruyama Park and Philosopher's Path.",
-        "price": "5400",
+        "name": "Copenhagen & North Zealand Cultural Immersion",
+        "description": "Five nights in a private Copenhagen townhouse with after-hours access to Designmuseum Denmark and a private dinner at a New Nordic restaurant.",
+        "price": "3200",
         "priceCurrency": "GBP",
-        "availability": "SoldOut"
+        "availability": "InStock"
       }
     ]
   }
@@ -49,11 +49,8 @@
       background: linear-gradient(to bottom, var(--black), var(--dark));
       border-bottom: 1px solid rgba(201,168,76,0.15);
     }
-
     .page-hero .section-label { margin-bottom: 1rem; }
     .page-hero .section-title { margin-bottom: 1.5rem; }
-
-    /* ── FILTER BAR ── */
     .filter-bar {
       padding: 2rem 4rem;
       background: var(--dark-mid);
@@ -63,7 +60,6 @@
       gap: 1rem;
       flex-wrap: wrap;
     }
-
     .filter-label {
       font-size: 0.65rem;
       letter-spacing: 0.25em;
@@ -71,7 +67,6 @@
       color: var(--gold);
       margin-right: 1rem;
     }
-
     .filter-btn {
       background: transparent;
       border: 1px solid rgba(255,255,255,0.15);
@@ -84,14 +79,7 @@
       cursor: pointer;
       transition: all 0.3s;
     }
-
-    .filter-btn:hover,
-    .filter-btn.active {
-      border-color: var(--gold);
-      color: var(--gold);
-    }
-
-    /* ── FEATURED DEAL ── */
+    .filter-btn:hover, .filter-btn.active { border-color: var(--gold); color: var(--gold); }
     .featured-deal {
       margin: 4rem 4rem 2rem;
       display: grid;
@@ -100,16 +88,7 @@
       border: 1px solid rgba(201,168,76,0.2);
       overflow: hidden;
     }
-
-    .featured-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      min-height: 480px;
-      background: var(--mid);
-      display: block;
-    }
-
+    .featured-img { width: 100%; height: 100%; object-fit: cover; min-height: 480px; display: block; }
     .featured-content {
       background: var(--dark-mid);
       padding: 4rem;
@@ -117,7 +96,6 @@
       flex-direction: column;
       justify-content: center;
     }
-
     .deal-badge {
       display: inline-block;
       background: var(--gold);
@@ -130,10 +108,8 @@
       margin-bottom: 2rem;
       width: fit-content;
     }
-
     .deal-badge.limited { background: #C44; color: white; }
     .deal-badge.seasonal { background: #2A7A3A; color: white; }
-
     .featured-content h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 2.5rem;
@@ -142,14 +118,7 @@
       line-height: 1.2;
       margin-bottom: 1.5rem;
     }
-
-    .featured-content p {
-      font-size: 0.82rem;
-      color: var(--light-grey);
-      line-height: 1.9;
-      margin-bottom: 2rem;
-    }
-
+    .featured-content p { font-size: 0.82rem; color: var(--light-grey); line-height: 1.9; margin-bottom: 2rem; }
     .deal-meta {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -159,7 +128,6 @@
       border-top: 1px solid rgba(255,255,255,0.07);
       border-bottom: 1px solid rgba(255,255,255,0.07);
     }
-
     .deal-meta-item label {
       display: block;
       font-size: 0.6rem;
@@ -168,42 +136,12 @@
       color: var(--gold);
       margin-bottom: 0.4rem;
     }
-
-    .deal-meta-item span {
-      font-size: 0.82rem;
-      color: var(--off-white);
-    }
-
-    .price-block {
-      display: flex;
-      align-items: baseline;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-
-    .price-was {
-      font-size: 1rem;
-      color: var(--light-grey);
-      text-decoration: line-through;
-    }
-
-    .price-now {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.2rem;
-      font-weight: 300;
-      color: var(--gold);
-    }
-
-    .price-pp {
-      font-size: 0.7rem;
-      color: var(--light-grey);
-    }
-
-    /* ── DEALS GRID ── */
-    .deals-section {
-      padding: 4rem;
-    }
-
+    .deal-meta-item span { font-size: 0.82rem; color: var(--off-white); }
+    .price-block { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 2rem; }
+    .price-was { font-size: 1rem; color: var(--light-grey); text-decoration: line-through; }
+    .price-now { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; color: var(--gold); }
+    .price-pp { font-size: 0.7rem; color: var(--light-grey); }
+    .deals-section { padding: 4rem; }
     .deals-section-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.6rem;
@@ -213,38 +151,16 @@
       padding-bottom: 1rem;
       border-bottom: 1px solid rgba(255,255,255,0.07);
     }
-
-    .deals-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      margin-bottom: 5rem;
-    }
-
+    .deals-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-bottom: 5rem; }
     .deal-card {
       background: var(--dark-mid);
       border: 1px solid rgba(255,255,255,0.07);
       overflow: hidden;
       transition: border-color 0.3s, transform 0.3s;
     }
-
-    .deal-card:hover {
-      border-color: rgba(201,168,76,0.4);
-      transform: translateY(-4px);
-    }
-
-    .deal-card-img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-      background: var(--mid);
-    }
-
-    .deal-card-body {
-      padding: 2rem;
-    }
-
+    .deal-card:hover { border-color: rgba(201,168,76,0.4); transform: translateY(-4px); }
+    .deal-card-img { width: 100%; height: 220px; object-fit: cover; display: block; }
+    .deal-card-body { padding: 2rem; }
     .deal-card-badge {
       display: inline-block;
       font-size: 0.58rem;
@@ -254,11 +170,9 @@
       padding: 0.3rem 0.8rem;
       margin-bottom: 1rem;
     }
-
     .badge-gold { background: rgba(201,168,76,0.15); color: var(--gold); }
     .badge-red { background: rgba(200,60,60,0.15); color: #E07070; }
     .badge-green { background: rgba(60,160,80,0.15); color: #70C080; }
-
     .deal-card h3 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.5rem;
@@ -267,14 +181,7 @@
       margin-bottom: 0.75rem;
       line-height: 1.3;
     }
-
-    .deal-card p {
-      font-size: 0.78rem;
-      color: var(--light-grey);
-      line-height: 1.8;
-      margin-bottom: 1.5rem;
-    }
-
+    .deal-card p { font-size: 0.78rem; color: var(--light-grey); line-height: 1.8; margin-bottom: 1.5rem; }
     .deal-card-footer {
       display: flex;
       justify-content: space-between;
@@ -282,26 +189,10 @@
       padding-top: 1.25rem;
       border-top: 1px solid rgba(255,255,255,0.07);
     }
-
-    .deal-price {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.7rem;
-      font-weight: 300;
-      color: var(--gold);
-    }
-
-    .deal-price-sub {
-      font-size: 0.65rem;
-      color: var(--light-grey);
-    }
-
-    .deal-nights {
-      font-size: 0.7rem;
-      color: var(--light-grey);
-      letter-spacing: 0.1em;
-    }
-
-    /* ── BANNER ── */
+    .deal-price { font-family: 'Cormorant Garamond', serif; font-size: 1.7rem; font-weight: 300; color: var(--gold); }
+    .deal-price-sub { font-size: 0.65rem; color: var(--light-grey); }
+    .deal-nights { font-size: 0.7rem; color: var(--light-grey); letter-spacing: 0.1em; }
+    .expiry-note { font-size: 0.65rem; color: rgba(200,80,80,0.8); letter-spacing: 0.1em; margin-top: 0.5rem; }
     .promo-banner {
       margin: 0 4rem 4rem;
       background: linear-gradient(135deg, var(--gold-dark), var(--gold));
@@ -310,22 +201,8 @@
       justify-content: space-between;
       align-items: center;
     }
-
-    .promo-banner p {
-      font-size: 0.7rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: rgba(0,0,0,0.6);
-      margin-bottom: 0.5rem;
-    }
-
-    .promo-banner h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      font-weight: 400;
-      color: var(--black);
-    }
-
+    .promo-banner p { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(0,0,0,0.6); margin-bottom: 0.5rem; }
+    .promo-banner h3 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 400; color: var(--black); }
     .btn-dark {
       display: inline-block;
       background: var(--black);
@@ -339,16 +216,7 @@
       white-space: nowrap;
       transition: background 0.3s;
     }
-
     .btn-dark:hover { background: var(--dark-mid); }
-
-    /* ── EXPIRY NOTICE ── */
-    .expiry-note {
-      font-size: 0.65rem;
-      color: rgba(200,80,80,0.8);
-      letter-spacing: 0.1em;
-      margin-top: 0.5rem;
-    }
   </style>
 </head>
 <body>
@@ -363,15 +231,13 @@
     </ul>
   </nav>
 
-  <!-- PAGE HERO -->
   <div class="page-hero">
     <p class="section-label">Current Offers</p>
     <span class="gold-line gold-line-left"></span>
     <h1 class="section-title">Deals &<br>Exclusive Offers</h1>
-    <p class="section-subtitle">A curated selection of time-limited offers, early booking incentives, and seasonal specials — all fully bespoke and exclusively available through Faraway & Fine™.</p>
+    <p class="section-subtitle">A curated selection of time-limited Nordic offers — early booking incentives, aurora season specials, and limited-availability fjord charters across Norway, Sweden, and Denmark.</p>
   </div>
 
-  <!-- FILTER BAR -->
   <div class="filter-bar">
     <span class="filter-label">Filter by:</span>
     <button class="filter-btn active" onclick="filterDeals('all', this)">All Offers</button>
@@ -383,155 +249,120 @@
 
   <!-- FEATURED DEAL -->
   <div class="featured-deal fade-in">
-    <img
-      class="featured-img"
-      src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=900&q=80"
-      alt="Maldives overwater bungalow at sunrise with turquoise water"
-      loading="lazy"
-    />
+    <img class="featured-img" src="https://images.unsplash.com/photo-1513519245088-0e12902e35ca?w=900&q=80" alt="Norwegian fjord at sunrise with dramatic mountain walls and still water" loading="lazy"/>
     <div class="featured-content">
-      <span class="deal-badge">Featured Deal · Save 20%</span>
-      <h2>Maldives Overwater Villa<br>— Early Booking 2025</h2>
-      <p>Seven nights at Faridhoo Atoll in a private overwater villa with direct lagoon access. Includes return floatplane transfers from Malé, daily breakfast and dinner, a private snorkelling guide, and a sunset dhoni cruise.</p>
+      <span class="deal-badge">Featured Deal · Save 15%</span>
+      <h2>Geirangerfjord Private Yacht<br>— Early Booking 2025</h2>
+      <p>Seven nights aboard a private 38-metre expedition yacht navigating Geirangerfjord and Nærøyfjord — two of Norway's UNESCO-listed fjords. Includes all meals prepared by an onboard Nordic chef, daily kayaking, a private hike to the Seven Sisters waterfall, and northern lights viewing from the sundeck.</p>
       <div class="deal-meta">
-        <div class="deal-meta-item">
-          <label>Duration</label>
-          <span>7 nights</span>
-        </div>
-        <div class="deal-meta-item">
-          <label>Departure</label>
-          <span>Year-round</span>
-        </div>
-        <div class="deal-meta-item">
-          <label>Offer Ends</label>
-          <span>31 March 2025</span>
-        </div>
+        <div class="deal-meta-item"><label>Duration</label><span>7 nights</span></div>
+        <div class="deal-meta-item"><label>Departure</label><span>May–September</span></div>
+        <div class="deal-meta-item"><label>Offer Ends</label><span>31 March 2025</span></div>
       </div>
       <div class="price-block">
-        <span class="price-was">£12,400</span>
-        <span class="price-now">£10,400</span>
+        <span class="price-was">£8,400</span>
+        <span class="price-now">£7,200</span>
         <span class="price-pp">per person</span>
       </div>
       <a href="product.html" class="btn-primary">View Full Details</a>
     </div>
   </div>
 
-  <!-- CURRENT DEALS GRID -->
+  <!-- DEALS GRID -->
   <div class="deals-section">
     <h2 class="deals-section-title">All Current Offers</h2>
     <div class="deals-grid" id="deals-grid">
 
-      <div class="deal-card fade-in" data-tag="early">
-        <img class="deal-card-img" src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=700&q=80" alt="Kyoto temple gate in morning mist" loading="lazy"/>
+      <div class="deal-card fade-in" data-tag="seasonal">
+        <img class="deal-card-img" src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=700&q=80" alt="Aurora borealis over snow-covered Norwegian wilderness" loading="lazy"/>
         <div class="deal-card-body">
-          <span class="deal-card-badge badge-gold">Early Booking</span>
-          <h3>Kyoto Cherry Blossom<br>Private Retreat</h3>
-          <p>Five nights in a private machiya townhouse with exclusive dawn access to Maruyama Park and the Philosopher's Path during peak sakura season. Includes a private tea ceremony and sake tasting.</p>
-          <p class="expiry-note">⚠ Only 2 allocations remaining</p>
+          <span class="deal-card-badge badge-green">Aurora Season Special</span>
+          <h3>Tromsø Aurora<br>Wilderness Camp</h3>
+          <p>Six nights in a private glass-roofed wilderness cabin above Tromsø during peak aurora season. Includes dog-sledding across the Lyngen Alps, snowshoeing under the midnight sky, and a private Sami cultural evening.</p>
+          <p class="expiry-note">⚠ Only 3 cabins remaining for January</p>
           <div class="deal-card-footer">
-            <div>
-              <div class="deal-price">£5,400</div>
-              <div class="deal-price-sub">per person</div>
-            </div>
-            <span class="deal-nights">5 nights · Apr 2025</span>
+            <div><div class="deal-price">£4,400</div><div class="deal-price-sub">per person (was £5,200)</div></div>
+            <span class="deal-nights">6 nights · Jan–Mar</span>
           </div>
         </div>
       </div>
 
-      <div class="deal-card fade-in" data-tag="seasonal">
-        <img class="deal-card-img" src="https://images.unsplash.com/photo-1531761535209-180857e963b9?w=700&q=80" alt="Patagonian glacier and mountain landscape" loading="lazy"/>
+      <div class="deal-card fade-in" data-tag="early">
+        <img class="deal-card-img" src="https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=700&q=80" alt="Copenhagen Nyhavn canal with colourful 17th century townhouses" loading="lazy"/>
         <div class="deal-card-body">
-          <span class="deal-card-badge badge-green">Seasonal Special</span>
-          <h3>Patagonia Winter<br>Wilderness Expedition</h3>
-          <p>Ten days exploring Torres del Paine and the Southern Ice Field with a private expedition team. Private glamping in eco-tents, helicopter transfers over glaciers, and guided kayaking on Lago Grey.</p>
+          <span class="deal-card-badge badge-gold">Early Booking · 15% Off</span>
+          <h3>Copenhagen Cultural<br>Immersion</h3>
+          <p>Five nights in a private Copenhagen townhouse in the Frederiksstaden district. After-hours access to Designmuseum Denmark, a private New Nordic chef's table dinner, and a day trip to Kronborg Castle in Helsingør.</p>
           <div class="deal-card-footer">
-            <div>
-              <div class="deal-price">£7,800</div>
-              <div class="deal-price-sub">per person (was £9,200)</div>
-            </div>
-            <span class="deal-nights">10 nights · Jun–Aug</span>
+            <div><div class="deal-price">£3,200</div><div class="deal-price-sub">per person (was £3,900)</div></div>
+            <span class="deal-nights">5 nights · Year-round</span>
           </div>
         </div>
       </div>
 
       <div class="deal-card fade-in" data-tag="lastminute">
-        <img class="deal-card-img" src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=700&q=80" alt="Sahara desert dunes at golden hour" loading="lazy"/>
+        <img class="deal-card-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80" alt="Stockholm archipelago at golden hour with wooden jetty" loading="lazy"/>
         <div class="deal-card-body">
           <span class="deal-card-badge badge-red">Last Minute</span>
-          <h3>Morocco Desert<br>& Medina Immersion</h3>
-          <p>Eight nights across Marrakech, the Drâa Valley, and the Merzouga dunes. Private riad accommodation, camel-trekking to a luxury desert camp, and a private cookery session with a medina family.</p>
+          <h3>Stockholm &<br>the Archipelago</h3>
+          <p>Seven nights based in Stockholm's Djurgården island, with three nights on a private chartered wooden sloop through the outer archipelago. Includes a private Vasa Museum evening tour and a foraging dinner in Djurgårdsbrunn.</p>
           <div class="deal-card-footer">
-            <div>
-              <div class="deal-price">£3,900</div>
-              <div class="deal-price-sub">per person (was £4,600)</div>
-            </div>
-            <span class="deal-nights">8 nights · Flexible</span>
+            <div><div class="deal-price">£4,100</div><div class="deal-price-sub">per person (was £4,800)</div></div>
+            <span class="deal-nights">7 nights · Flexible</span>
           </div>
         </div>
       </div>
 
       <div class="deal-card fade-in" data-tag="limited">
-        <img class="deal-card-img" src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=700&q=80" alt="Norwegian fjord with dramatic mountains and reflections" loading="lazy"/>
+        <img class="deal-card-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&q=80" alt="Lofoten Islands Norway with dramatic peaks and fishing village" loading="lazy"/>
         <div class="deal-card-body">
-          <span class="deal-card-badge badge-red">Limited — 1 Departure</span>
-          <h3>Norwegian Fjords<br>Private Yacht Charter</h3>
-          <p>Seven days aboard a 42-metre expedition yacht through the Geirangerfjord and Nærøyfjord. Private crew of six, freshly caught seafood dinners, and northern lights viewing from the sundeck.</p>
+          <span class="deal-card-badge badge-red">Limited — 2 Departures Only</span>
+          <h3>Lofoten Islands<br>Winter Expedition</h3>
+          <p>Eight days on the Lofoten archipelago in January — the finest month for dramatic skies and deserted beaches. Private rorbuer (fishermen's cabin) accommodation, sea eagle safaris by RIB, and northern lights photography sessions.</p>
           <div class="deal-card-footer">
-            <div>
-              <div class="deal-price">£18,600</div>
-              <div class="deal-price-sub">per couple</div>
-            </div>
-            <span class="deal-nights">7 nights · Feb 2025</span>
+            <div><div class="deal-price">£5,600</div><div class="deal-price-sub">per person</div></div>
+            <span class="deal-nights">8 nights · Jan 2025</span>
           </div>
         </div>
       </div>
 
       <div class="deal-card fade-in" data-tag="early">
-        <img class="deal-card-img" src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=700&q=80" alt="Amalfi Coast cliffside with colourful buildings and sea view" loading="lazy"/>
+        <img class="deal-card-img" src="https://images.unsplash.com/photo-1509356843151-3e7d96241e11?w=700&q=80" alt="Gothenburg Sweden harbour with boats and historic buildings" loading="lazy"/>
         <div class="deal-card-body">
-          <span class="deal-card-badge badge-gold">Early Booking · 15% Off</span>
-          <h3>Amalfi Coast Villa<br>Summer 2025</h3>
-          <p>Ten nights in an exclusive clifftop villa above Positano, sleeping six. Private chef, a chartered wooden gozzo for coastal excursions, and cellar-door visits to Campania wine estates.</p>
+          <span class="deal-card-badge badge-gold">Early Booking · 10% Off</span>
+          <h3>Gothenburg &<br>the Bohuslän Coast</h3>
+          <p>Six nights split between Gothenburg's Haga district and a private island retreat on the Bohuslän coast. Includes a private tour of the Gothenburg Museum of Art, a West Swedish seafood safari, and a kayaking day through granite skerries.</p>
           <div class="deal-card-footer">
-            <div>
-              <div class="deal-price">£22,000</div>
-              <div class="deal-price-sub">whole villa / week</div>
-            </div>
-            <span class="deal-nights">10 nights · Jul–Sep</span>
+            <div><div class="deal-price">£3,600</div><div class="deal-price-sub">per person (was £4,000)</div></div>
+            <span class="deal-nights">6 nights · Jun–Aug</span>
           </div>
         </div>
       </div>
 
       <div class="deal-card fade-in" data-tag="seasonal">
-        <img class="deal-card-img" src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=700&q=80" alt="African safari at sunset with acacia trees and wildlife" loading="lazy"/>
+        <img class="deal-card-img" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=700&q=80" alt="Midnight sun over Norwegian mountain lake with reflections" loading="lazy"/>
         <div class="deal-card-body">
-          <span class="deal-card-badge badge-green">Seasonal · Peak Season</span>
-          <h3>Botswana Okavango<br>Private Concession</h3>
-          <p>Seven nights in a private four-tent camp in the Okavango Delta during peak dry season. Exclusive mokoro canoe trips, walking safaris, and game drives with an expert naturalist guide.</p>
+          <span class="deal-card-badge badge-green">Midnight Sun Season</span>
+          <h3>Norwegian Fjords<br>Midnight Sun Cruise</h3>
+          <p>Five nights aboard a private 28-metre ketch sailing the Hardangerfjord in June, when the sun never fully sets. Includes a private visit to the Hardanger Glacier, orchard walking in Lofthus, and cider tasting at a family farm.</p>
           <div class="deal-card-footer">
-            <div>
-              <div class="deal-price">£11,200</div>
-              <div class="deal-price-sub">per person</div>
-            </div>
-            <span class="deal-nights">7 nights · Jul–Oct</span>
+            <div><div class="deal-price">£6,200</div><div class="deal-price-sub">per person</div></div>
+            <span class="deal-nights">5 nights · Jun–Jul</span>
           </div>
         </div>
       </div>
 
     </div>
 
-    <!-- PROMO BANNER -->
     <div class="promo-banner fade-in">
       <div>
         <p>Exclusive Benefit</p>
-        <h3>Book Any 2025 Journey Before 28 February — Receive a £500 Spa Credit</h3>
+        <h3>Book Any 2025 Nordic Journey Before 28 February — Receive a £400 Spa Credit</h3>
       </div>
       <a href="#contact" class="btn-dark">Claim This Offer</a>
     </div>
-
   </div>
 
-  <!-- FOOTER -->
   <footer id="contact">
     <div class="footer-grid">
       <div class="footer-brand">
@@ -549,11 +380,11 @@
       <div class="footer-col">
         <h4>Destinations</h4>
         <ul>
-          <li><a href="product.html">Maldives</a></li>
-          <li><a href="product.html">Kyoto</a></li>
-          <li><a href="product.html">Patagonia</a></li>
-          <li><a href="product.html">Morocco</a></li>
-          <li><a href="product.html">Norway</a></li>
+          <li><a href="product.html">Geirangerfjord</a></li>
+          <li><a href="product.html">Tromsø</a></li>
+          <li><a href="product.html">Stockholm</a></li>
+          <li><a href="product.html">Copenhagen</a></li>
+          <li><a href="product.html">Gothenburg</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -581,11 +412,7 @@
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       document.querySelectorAll('.deal-card').forEach(card => {
-        if (tag === 'all' || card.dataset.tag === tag) {
-          card.style.display = 'block';
-        } else {
-          card.style.display = 'none';
-        }
+        card.style.display = (tag === 'all' || card.dataset.tag === tag) ? 'block' : 'none';
       });
     }
   </script>

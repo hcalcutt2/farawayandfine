@@ -3,85 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luxury Travel Experiences — Faraway & Fine™</title>
-  <meta name="description" content="Explore Faraway & Fine™ signature experiences: private expedition yachts, remote wilderness camps, cultural immersions, and gastronomy journeys across 147 destinations worldwide." />
+  <title>Luxury Scandinavian Experiences — Faraway & Fine™</title>
+  <meta name="description" content="Explore Faraway & Fine™ signature Scandinavian experiences: private fjord yacht charters, Arctic wilderness camps, Nordic cultural immersions, and New Nordic gastronomy journeys across Norway, Sweden, and Denmark." />
   <meta name="robots" content="index, follow" />
   <script type="application/ld+json">
   [
     {
       "@context": "https://schema.org",
       "@type": "Product",
-      "name": "Faraway & Fine™ Maldives Private Atoll — 7 Nights",
-      "description": "Seven nights in a private overwater villa at Faridhoo Atoll in the Maldives. Includes floatplane transfers, all dining, and a private snorkelling guide.",
+      "name": "Faraway & Fine™ Geirangerfjord Private Yacht — 7 Nights",
+      "description": "Seven nights aboard a private 38-metre expedition yacht through Geirangerfjord and Nærøyfjord, Norway. Includes Nordic chef, kayaking, and Seven Sisters waterfall hike.",
       "brand": { "@type": "Brand", "name": "Faraway & Fine™" },
-      "offers": {
-        "@type": "Offer",
-        "price": "12400",
-        "priceCurrency": "GBP",
-        "availability": "https://schema.org/InStock"
-      },
-      "category": "Luxury Travel"
+      "offers": { "@type": "Offer", "price": "8400", "priceCurrency": "GBP", "availability": "https://schema.org/InStock" },
+      "category": "Fjord Yacht Charter"
     },
     {
       "@context": "https://schema.org",
       "@type": "Product",
-      "name": "Faraway & Fine™ Patagonia Expedition — 10 Days",
-      "description": "Ten-day guided wilderness expedition through Torres del Paine and the Southern Ice Field, with helicopter glacier transfers and private glamping.",
+      "name": "Faraway & Fine™ Tromsø Aurora Wilderness Camp — 6 Nights",
+      "description": "Six nights in a private glass-roofed wilderness cabin above Tromsø during peak aurora season with dog-sledding and Sami cultural experiences.",
       "brand": { "@type": "Brand", "name": "Faraway & Fine™" },
-      "offers": {
-        "@type": "Offer",
-        "price": "9200",
-        "priceCurrency": "GBP",
-        "availability": "https://schema.org/InStock"
-      },
-      "category": "Expedition Travel"
+      "offers": { "@type": "Offer", "price": "5200", "priceCurrency": "GBP", "availability": "https://schema.org/LimitedAvailability" },
+      "category": "Arctic Wilderness"
     },
     {
       "@context": "https://schema.org",
       "@type": "Product",
-      "name": "Faraway & Fine™ Norwegian Fjords Private Yacht — 7 Days",
-      "description": "Seven days aboard a 42-metre expedition yacht through Geirangerfjord and Nærøyfjord with a private crew, fresh seafood, and northern lights viewing.",
+      "name": "Faraway & Fine™ Copenhagen Cultural Immersion — 5 Nights",
+      "description": "Five nights in a private Frederiksstaden townhouse with after-hours Designmuseum Denmark access, New Nordic chef's table dinner, and Kronborg Castle visit.",
       "brand": { "@type": "Brand", "name": "Faraway & Fine™" },
-      "offers": {
-        "@type": "Offer",
-        "price": "18600",
-        "priceCurrency": "GBP",
-        "availability": "https://schema.org/LimitedAvailability"
-      },
-      "category": "Yacht Charter"
+      "offers": { "@type": "Offer", "price": "3900", "priceCurrency": "GBP", "availability": "https://schema.org/InStock" },
+      "category": "Cultural Immersion"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Faraway & Fine™ Swedish Forest Gastronomy Journey — 7 Nights",
+      "description": "Seven nights exploring New Nordic food culture across Sweden: foraging in Sörmland forests, a private chef's table at a Michelin-starred Gothenburg restaurant, and aquavit distillery visits in Malmö.",
+      "brand": { "@type": "Brand", "name": "Faraway & Fine™" },
+      "offers": { "@type": "Offer", "price": "5800", "priceCurrency": "GBP", "availability": "https://schema.org/InStock" },
+      "category": "Nordic Gastronomy"
     }
   ]
   </script>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* ── PAGE HERO ── */
     .page-hero {
       position: relative;
       padding: 14rem 4rem 8rem;
       overflow: hidden;
     }
-
     .page-hero-bg {
       position: absolute;
       inset: 0;
       background:
         linear-gradient(to right, rgba(10,10,10,0.95) 50%, rgba(10,10,10,0.5) 100%),
-        url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80') center/cover no-repeat;
+        url('https://images.unsplash.com/photo-1513519245088-0e12902e35ca?w=1800&q=80') center/cover no-repeat;
     }
-
     .page-hero-content { position: relative; z-index: 2; max-width: 600px; }
     .page-hero .section-label { margin-bottom: 1rem; }
     .page-hero .section-title { margin-bottom: 1.5rem; }
-
-    /* ── PRODUCT TABS ── */
     .product-tabs {
       background: var(--dark-mid);
       border-bottom: 1px solid rgba(255,255,255,0.07);
       padding: 0 4rem;
       display: flex;
-      gap: 0;
     }
-
     .tab-btn {
       background: transparent;
       border: none;
@@ -96,41 +83,19 @@
       cursor: pointer;
       transition: color 0.3s, border-color 0.3s;
     }
-
-    .tab-btn:hover,
-    .tab-btn.active {
-      color: var(--gold);
-      border-bottom-color: var(--gold);
-    }
-
-    /* ── PRODUCT HERO CARD ── */
+    .tab-btn:hover, .tab-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
     .product-section { padding: 5rem 4rem; }
-
     .product-feature {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 0;
       border: 1px solid rgba(201,168,76,0.2);
       margin-bottom: 2rem;
+      overflow: hidden;
     }
-
     .product-feature.reverse { direction: rtl; }
     .product-feature.reverse > * { direction: ltr; }
-
-    .product-feature-img {
-      width: 100%;
-      height: 100%;
-      min-height: 560px;
-      object-fit: cover;
-      display: block;
-      background: var(--mid);
-    }
-
-    .product-feature-content {
-      background: var(--dark-mid);
-      padding: 4rem;
-    }
-
+    .product-feature-img { width: 100%; height: 100%; min-height: 560px; object-fit: cover; display: block; }
+    .product-feature-content { background: var(--dark-mid); padding: 4rem; }
     .product-tag {
       display: inline-block;
       font-size: 0.6rem;
@@ -142,7 +107,6 @@
       padding: 0.35rem 0.9rem;
       margin-bottom: 1.5rem;
     }
-
     .product-feature-content h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 2.4rem;
@@ -151,26 +115,9 @@
       line-height: 1.2;
       margin-bottom: 0.75rem;
     }
-
-    .product-duration {
-      font-size: 0.7rem;
-      color: var(--gold);
-      letter-spacing: 0.15em;
-      margin-bottom: 1.5rem;
-    }
-
-    .product-feature-content p {
-      font-size: 0.82rem;
-      color: var(--light-grey);
-      line-height: 1.9;
-      margin-bottom: 1.5rem;
-    }
-
-    .product-includes {
-      list-style: none;
-      margin: 1.5rem 0 2rem;
-    }
-
+    .product-duration { font-size: 0.7rem; color: var(--gold); letter-spacing: 0.15em; margin-bottom: 1.5rem; }
+    .product-feature-content p { font-size: 0.82rem; color: var(--light-grey); line-height: 1.9; margin-bottom: 1.5rem; }
+    .product-includes { list-style: none; margin: 1.5rem 0 2rem; }
     .product-includes li {
       font-size: 0.78rem;
       color: var(--off-white);
@@ -180,13 +127,7 @@
       align-items: center;
       gap: 0.75rem;
     }
-
-    .product-includes li::before {
-      content: '✓';
-      color: var(--gold);
-      font-size: 0.75rem;
-    }
-
+    .product-includes li::before { content: '✓'; color: var(--gold); font-size: 0.75rem; }
     .product-price-row {
       display: flex;
       justify-content: space-between;
@@ -195,136 +136,38 @@
       border-top: 1px solid rgba(255,255,255,0.08);
       margin-top: 1.5rem;
     }
-
-    .product-price {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      font-weight: 300;
-      color: var(--gold);
-    }
-
-    .product-price-note {
-      font-size: 0.68rem;
-      color: var(--light-grey);
-      display: block;
-      margin-top: 0.2rem;
-    }
-
-    /* ── MINI CARDS ── */
-    .mini-cards-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 2rem;
-    }
-
-    .mini-cards-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.8rem;
-      font-weight: 300;
-      color: var(--white);
-    }
-
-    .mini-cards-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      margin-bottom: 5rem;
-    }
-
+    .product-price { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; color: var(--gold); }
+    .product-price-note { font-size: 0.68rem; color: var(--light-grey); display: block; margin-top: 0.2rem; }
+    .mini-cards-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2rem; }
+    .mini-cards-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--white); }
+    .mini-cards-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; margin-bottom: 5rem; }
     .mini-card {
       background: var(--dark-mid);
       border: 1px solid rgba(255,255,255,0.07);
       overflow: hidden;
       transition: border-color 0.3s, transform 0.3s;
     }
-
-    .mini-card:hover {
-      border-color: rgba(201,168,76,0.4);
-      transform: translateY(-4px);
-    }
-
-    .mini-card-img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      display: block;
-      background: var(--mid);
-    }
-
-    .mini-card-body {
-      padding: 1.5rem;
-    }
-
-    .mini-card-region {
-      font-size: 0.58rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.5rem;
-    }
-
-    .mini-card h4 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.2rem;
-      font-weight: 400;
-      color: var(--white);
-      margin-bottom: 0.75rem;
-    }
-
-    .mini-card p {
-      font-size: 0.72rem;
-      color: var(--light-grey);
-      line-height: 1.7;
-      margin-bottom: 1.2rem;
-    }
-
-    .mini-card-price {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem;
-      color: var(--gold);
-    }
-
-    .mini-card-from {
-      font-size: 0.6rem;
-      color: var(--light-grey);
-    }
-
-    /* ── HOW IT WORKS ── */
-    .how-it-works {
-      background: var(--dark-mid);
-      padding: 7rem 4rem;
-    }
-
-    .hiw-header {
-      text-align: center;
-      margin-bottom: 5rem;
-    }
-
-    .hiw-steps {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 3rem;
-      position: relative;
-    }
-
+    .mini-card:hover { border-color: rgba(201,168,76,0.4); transform: translateY(-4px); }
+    .mini-card-img { width: 100%; height: 180px; object-fit: cover; display: block; }
+    .mini-card-body { padding: 1.5rem; }
+    .mini-card-region { font-size: 0.58rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .mini-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 400; color: var(--white); margin-bottom: 0.75rem; }
+    .mini-card p { font-size: 0.72rem; color: var(--light-grey); line-height: 1.7; margin-bottom: 1.2rem; }
+    .mini-card-price { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--gold); }
+    .mini-card-from { font-size: 0.6rem; color: var(--light-grey); }
+    .how-it-works { background: var(--dark-mid); padding: 7rem 4rem; }
+    .hiw-header { text-align: center; margin-bottom: 5rem; }
+    .hiw-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3rem; position: relative; }
     .hiw-steps::before {
       content: '';
       position: absolute;
-      top: 2rem;
-      left: 12%;
-      right: 12%;
+      top: 2rem; left: 12%; right: 12%;
       height: 1px;
       background: linear-gradient(to right, transparent, var(--gold), transparent);
     }
-
-    .hiw-step {
-      text-align: center;
-    }
-
+    .hiw-step { text-align: center; }
     .hiw-number {
-      width: 4rem;
-      height: 4rem;
+      width: 4rem; height: 4rem;
       border: 1px solid var(--gold);
       border-radius: 50%;
       display: flex;
@@ -338,20 +181,8 @@
       position: relative;
       z-index: 1;
     }
-
-    .hiw-step h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: var(--white);
-      margin-bottom: 0.75rem;
-    }
-
-    .hiw-step p {
-      font-size: 0.75rem;
-      color: var(--light-grey);
-      line-height: 1.8;
-    }
+    .hiw-step h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 400; color: var(--white); margin-bottom: 0.75rem; }
+    .hiw-step p { font-size: 0.75rem; color: var(--light-grey); line-height: 1.8; }
   </style>
 </head>
 <body>
@@ -366,218 +197,179 @@
     </ul>
   </nav>
 
-  <!-- PAGE HERO -->
   <div class="page-hero">
     <div class="page-hero-bg"></div>
     <div class="page-hero-content">
       <p class="section-label">Our Journeys</p>
       <span class="gold-line gold-line-left"></span>
-      <h1 class="section-title">Signature<br>Experiences</h1>
-      <p class="section-subtitle">Each Faraway & Fine journey is a hand-built itinerary. Below are our flagship experiences — all fully customisable, all exclusively available through a Faraway & Fine Travel Director.</p>
+      <h1 class="section-title">Signature<br>Scandinavian<br>Experiences</h1>
+      <p class="section-subtitle">Each Faraway & Fine journey is hand-built around you. Below are our flagship Nordic experiences — all fully customisable, all exclusively available through a Faraway & Fine Travel Director.</p>
       <br>
       <a href="#signature" class="btn-primary">Browse Experiences</a>
     </div>
   </div>
 
-  <!-- PRODUCT TABS -->
   <div class="product-tabs">
     <button class="tab-btn active" onclick="showTab('all', this)">All Experiences</button>
-    <button class="tab-btn" onclick="showTab('yacht', this)">Yachts</button>
+    <button class="tab-btn" onclick="showTab('yacht', this)">Fjord Yachts</button>
     <button class="tab-btn" onclick="showTab('wilderness', this)">Wilderness</button>
     <button class="tab-btn" onclick="showTab('cultural', this)">Cultural</button>
     <button class="tab-btn" onclick="showTab('gastronomy', this)">Gastronomy</button>
   </div>
 
-  <!-- SIGNATURE EXPERIENCES -->
   <div class="product-section" id="signature">
 
-    <!-- PRODUCT 1 -->
-    <div class="product-feature fade-in" data-type="wilderness">
-      <img
-        class="product-feature-img"
-        src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=900&q=80"
-        alt="Private overwater villa in the Maldives with turquoise lagoon at sunset"
-        loading="lazy"
-      />
+    <!-- PRODUCT 1: FJORD YACHT -->
+    <div class="product-feature fade-in" data-type="yacht">
+      <img class="product-feature-img" src="https://images.unsplash.com/photo-1513519245088-0e12902e35ca?w=900&q=80" alt="Geirangerfjord Norway with steep green cliffs and waterfall reflections in still water" loading="lazy"/>
       <div class="product-feature-content">
-        <span class="product-tag">Indian Ocean · Wilderness</span>
-        <h2>Maldives Private Atoll</h2>
-        <p class="product-duration">7 Nights · Year-round Departure</p>
-        <p>Faraway & Fine has secured exclusive access to a private 12-villa island at Faridhoo Atoll in the North Malé region — unavailable to the general public through any other channel. Your villa sits 40 metres over a protected marine lagoon with direct ocean access.</p>
-        <p>The island hosts a resident marine biologist who leads private snorkelling and dive excursions to a nearby manta ray cleaning station, accessible only via a private speedboat. Evenings include a personal chef who adjusts menus daily to your preferences, sourcing ingredients from sustainable Maldivian farms.</p>
+        <span class="product-tag">Western Norway · Fjord Yacht Charter</span>
+        <h2>Geirangerfjord &<br>Nærøyfjord Private Yacht</h2>
+        <p class="product-duration">7 Nights · May to September</p>
+        <p>Faraway & Fine has secured exclusive seasonal use of the MV Nordlys — a 38-metre expedition ketch built in Bergen in 1987 and fully restored in 2022. The vessel accommodates up to six guests with a crew of five, including a Nordic chef who sources ingredients daily from fjordside farms and fishing boats.</p>
+        <p>The route covers Geirangerfjord (a UNESCO World Heritage Site), the near-vertical walls of Nærøyfjord (Europe's narrowest fjord), and the remote Sunnylvsfjord. A private hiking guide leads an ascent to the Seven Sisters viewpoint, accessible only on foot from the water.</p>
         <ul class="product-includes">
-          <li>Return floatplane transfers from Malé Airport (Velana International)</li>
-          <li>Full-board dining with a private chef; menus adapted daily</li>
-          <li>Two-hour manta ray snorkelling excursion with marine biologist</li>
-          <li>Sunset dhoni cruise with champagne and canapés</li>
-          <li>In-villa spa treatments (2 per guest)</li>
-          <li>24-hour Faraway & Fine Travel Director support</li>
+          <li>Exclusive use of MV Nordlys for up to 6 guests</li>
+          <li>Full crew: captain, first mate, engineer, chef, hiking guide</li>
+          <li>All meals using daily-sourced Norwegian produce and seafood</li>
+          <li>Private guided hike to Seven Sisters viewpoint</li>
+          <li>Daily kayaking from the yacht in protected fjord waters</li>
+          <li>24/7 Faraway & Fine Travel Director contact</li>
         </ul>
         <div class="product-price-row">
           <div>
-            <span class="product-price">£12,400</span>
-            <span class="product-price-note">per person · based on two guests</span>
+            <span class="product-price">£8,400</span>
+            <span class="product-price-note">per person · based on 4 guests</span>
           </div>
           <a href="deals.html" class="btn-primary">Check Offers</a>
         </div>
       </div>
     </div>
 
-    <!-- PRODUCT 2 -->
-    <div class="product-feature reverse fade-in" data-type="yacht">
-      <img
-        class="product-feature-img"
-        src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=900&q=80"
-        alt="Norwegian fjord with dramatic cliffs and calm water"
-        loading="lazy"
-      />
+    <!-- PRODUCT 2: AURORA WILDERNESS -->
+    <div class="product-feature reverse fade-in" data-type="wilderness">
+      <img class="product-feature-img" src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=900&q=80" alt="Aurora borealis green curtain over snow-covered Norwegian mountain landscape at night" loading="lazy"/>
       <div class="product-feature-content">
-        <span class="product-tag">Scandinavia · Yacht Charter</span>
-        <h2>Norwegian Fjords Private Yacht</h2>
-        <p class="product-duration">7 Days · February, June & September</p>
-        <p>Charter the MV Hjørundfjord — a 42-metre expedition yacht purpose-built for the Norwegian coast — and navigate the most dramatic waterways in Europe. The vessel carries up to six guests with a crew of eight including a private chef, expedition guide, and cinematographer.</p>
-        <p>The route passes through Geirangerfjord (a UNESCO World Heritage Site), Nærøyfjord (the narrowest in Europe), and the remote Hjørundfjord. In February, the route is optimised for northern lights viewing; in June, the midnight sun. A kayaking guide is aboard for all departures.</p>
+        <span class="product-tag">Northern Norway · Arctic Wilderness</span>
+        <h2>Tromsø Aurora<br>Wilderness Experience</h2>
+        <p class="product-duration">6 Nights · November to March</p>
+        <p>Faraway & Fine operates three private glass-roofed wilderness cabins on a hillside 14 kilometres above Tromsø, at an elevation of 420 metres — above the light pollution of the city and positioned for optimal aurora viewing. Each cabin sleeps two and is staffed by a dedicated local guide throughout the stay.</p>
+        <p>The programme includes a full-day dog-sledding expedition across the Lyngen Alps with a Sami musher, a private snowshoeing journey to a frozen waterfall lit only by headtorch, and an evening with a Sami family at their traditional lavvu tent over reindeer stew and joik singing.</p>
         <ul class="product-includes">
-          <li>Exclusive use of MV Hjørundfjord (up to 6 guests)</li>
-          <li>Full crew: captain, chef, expedition guide, cinematographer</li>
-          <li>All meals prepared with locally sourced Norwegian produce</li>
-          <li>Daily kayaking, hiking, and fjord swimming opportunities</li>
-          <li>Northern lights wake-up call service (February departures)</li>
-          <li>Complimentary drone footage of your voyage</li>
+          <li>6 nights in a private glass-roofed aurora cabin (sleeps 2)</li>
+          <li>Full-day dog-sledding across the Lyngen Alps with Sami musher</li>
+          <li>Private snowshoeing to a frozen waterfall by headtorch</li>
+          <li>Evening with a Sami family: reindeer stew and joik singing</li>
+          <li>Northern lights wake-up service throughout the stay</li>
+          <li>Return transfers from Tromsø Airport (TOS)</li>
         </ul>
         <div class="product-price-row">
           <div>
-            <span class="product-price">£18,600</span>
-            <span class="product-price-note">per couple · whole-yacht charter</span>
+            <span class="product-price">£5,200</span>
+            <span class="product-price-note">per person · based on 2 guests</span>
           </div>
-          <a href="deals.html" class="btn-primary">View Current Offers</a>
+          <a href="deals.html" class="btn-primary">Aurora Season Offers</a>
         </div>
       </div>
     </div>
 
-    <!-- PRODUCT 3 -->
-    <div class="product-feature fade-in" data-type="wilderness">
-      <img
-        class="product-feature-img"
-        src="https://images.unsplash.com/photo-1531761535209-180857e963b9?w=900&q=80"
-        alt="Patagonian glaciers and mountains with dramatic cloudy sky"
-        loading="lazy"
-      />
+    <!-- PRODUCT 3: COPENHAGEN CULTURAL -->
+    <div class="product-feature fade-in" data-type="cultural">
+      <img class="product-feature-img" src="https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=900&q=80" alt="Copenhagen Nyhavn canal with colourful 17th century townhouses and moored wooden boats" loading="lazy"/>
       <div class="product-feature-content">
-        <span class="product-tag">South America · Expedition</span>
-        <h2>Patagonia Southern Ice Expedition</h2>
-        <p class="product-duration">10 Days · June, July & August</p>
-        <p>A private expedition into some of the most remote terrain on Earth. Beginning in Puerto Natales, your Faraway & Fine expedition team guides you through Torres del Paine National Park, across the Southern Patagonian Ice Field, and into the cave systems of the Río Serrano canyon.</p>
-        <p>Accommodation is at Faraway & Fine's own network of eco glamping sites — four-poster beds inside weatherproof canvas tents with wood-burning stoves and private outdoor baths overlooking the ice. Helicopter transfers are used for ice field crossings.</p>
+        <span class="product-tag">Denmark · Cultural Immersion</span>
+        <h2>Copenhagen &<br>North Zealand</h2>
+        <p class="product-duration">5 Nights · Year-round</p>
+        <p>Faraway & Fine's Copenhagen programme is based in a privately managed townhouse on Bredgade in the Frederiksstaden district — a 19th-century neoclassical street two minutes' walk from the Designmuseum Denmark. The property sleeps four and is arranged exclusively for Faraway & Fine guests.</p>
+        <p>Your Cultural Director, a former curator at the Danish Design Centre, arranges a private after-hours walk through the Designmuseum's permanent collection, a day trip to Kronborg Castle (Shakespeare's Elsinore) in Helsingør, and a private dinner prepared by a New Nordic chef in your townhouse using market produce from Torvehallerne.</p>
         <ul class="product-includes">
-          <li>Private expedition team: lead guide, safety specialist, photographer</li>
-          <li>Helicopter glacier transfers over the Southern Ice Field</li>
-          <li>Private eco-glamping at three Faraway & Fine sites (no shared facilities)</li>
-          <li>Guided kayaking on Lago Grey among floating icebergs</li>
-          <li>Full board, including expedition-style hot meals in remote locations</li>
-          <li>Sat-phone and emergency evacuation protocol</li>
+          <li>5 nights in a private townhouse, Frederiksstaden, Copenhagen</li>
+          <li>After-hours private tour of Designmuseum Denmark</li>
+          <li>Day trip to Kronborg Castle, Helsingør with private guide</li>
+          <li>Private New Nordic dinner in-house by a visiting chef</li>
+          <li>Morning market visit to Torvehallerne with your Cultural Director</li>
+          <li>Private canal tour of Copenhagen's historic waterways</li>
         </ul>
         <div class="product-price-row">
           <div>
-            <span class="product-price">£9,200</span>
-            <span class="product-price-note">per person · minimum 2 guests</span>
+            <span class="product-price">£3,900</span>
+            <span class="product-price-note">per person · based on 2 guests</span>
           </div>
-          <a href="deals.html" class="btn-outline">See Winter Deals</a>
+          <a href="deals.html" class="btn-outline">Early Booking Offer</a>
         </div>
       </div>
     </div>
 
-    <!-- PRODUCT 4 -->
-    <div class="product-feature reverse fade-in" data-type="cultural">
-      <img
-        class="product-feature-img"
-        src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=900&q=80"
-        alt="Traditional Japanese temple pathway through bamboo and stone lanterns"
-        loading="lazy"
-      />
+    <!-- PRODUCT 4: GASTRONOMY -->
+    <div class="product-feature reverse fade-in" data-type="gastronomy">
+      <img class="product-feature-img" src="https://images.unsplash.com/photo-1509356843151-3e7d96241e11?w=900&q=80" alt="Gothenburg Sweden harbour with wooden boats and historic stone buildings" loading="lazy"/>
       <div class="product-feature-content">
-        <span class="product-tag">East Asia · Cultural Immersion</span>
-        <h2>Kyoto Private Heritage Retreat</h2>
-        <p class="product-duration">5 Nights · March–April (Sakura) or November (Koyo)</p>
-        <p>Faraway & Fine's Kyoto programme centres on a private machiya — a restored 1890s townhouse in the Nishijin weaver's district, sleeping four. The property is unavailable to the public and has been prepared exclusively for Faraway & Fine guests by the family who has owned it for four generations.</p>
-        <p>Your Faraway & Fine Cultural Director, a former professor of Japanese history at Kyoto University, arranges private access to Maruyama Park before dawn, a personal audience with the master of a third-generation sake brewery, and a private performance by a maiko (apprentice geisha) in a Gion ochaya teahouse.</p>
+        <span class="product-tag">Sweden · Nordic Gastronomy</span>
+        <h2>Sweden New Nordic<br>Gastronomy Journey</h2>
+        <p class="product-duration">7 Nights · April to October</p>
+        <p>A journey structured entirely around the New Nordic food movement — the culinary philosophy of hyper-local, foraged, and fermented ingredients that transformed world cuisine from a Stockholm kitchen. Faraway & Fine's Gastronomy Director, a former sous-chef at a two-Michelin-star restaurant in Gothenburg, guides the entire week.</p>
+        <p>The itinerary moves from Stockholm to Sörmland for a guided forest foraging expedition, south to Gothenburg for a private chef's table at one of the city's Michelin-recognised restaurants, and west to Malmö for a private tasting session at a craft aquavit distillery in the city's regenerated Hyllie district.</p>
         <ul class="product-includes">
-          <li>Five nights in a private machiya townhouse, Nishijin district</li>
-          <li>Pre-dawn private access to Maruyama Park and Philosopher's Path</li>
-          <li>Private audience and tasting at a third-generation sake brewery</li>
-          <li>Maiko performance in a private Gion teahouse</li>
-          <li>Hands-on wagashi (Japanese sweet) making with a confectionery master</li>
-          <li>Dedicated Cultural Director throughout the stay</li>
+          <li>Guided forest foraging in Sörmland with a professional forager</li>
+          <li>Private chef's table at a Michelin-recognised Gothenburg restaurant</li>
+          <li>Private aquavit tasting at a Malmö craft distillery</li>
+          <li>Home cooking session with a Swedish farmhouse family in Dalarna</li>
+          <li>Visits to IKEA's original Älmhult store and design archive (private access)</li>
+          <li>All accommodation in design-led Swedish boutique properties</li>
         </ul>
         <div class="product-price-row">
           <div>
-            <span class="product-price">£6,800</span>
-            <span class="product-price-note">per person · based on two guests</span>
+            <span class="product-price">£5,800</span>
+            <span class="product-price-note">per person · based on 2 guests</span>
           </div>
-          <a href="deals.html" class="btn-primary">Cherry Blossom Offer</a>
+          <a href="deals.html" class="btn-primary">View Deals</a>
         </div>
       </div>
     </div>
 
   </div>
 
-  <!-- MINI CARDS — More Destinations -->
+  <!-- MINI CARDS -->
   <div class="product-section">
     <div class="mini-cards-header fade-in">
-      <h2 class="mini-cards-title">More Destinations</h2>
+      <h2 class="mini-cards-title">More Nordic Destinations</h2>
       <a href="deals.html" class="btn-outline">Current Deals</a>
     </div>
     <div class="mini-cards-grid fade-in">
       <div class="mini-card">
-        <img class="mini-card-img" src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=500&q=80" alt="Sahara Desert dunes Morocco" loading="lazy"/>
+        <img class="mini-card-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&q=80" alt="Lofoten Islands Norway dramatic peaks above fishing village" loading="lazy"/>
         <div class="mini-card-body">
-          <p class="mini-card-region">North Africa</p>
-          <h4>Morocco Desert & Medina</h4>
-          <p>Marrakech riads, Drâa Valley oases, and a private desert camp among the Merzouga dunes.</p>
-          <div>
-            <span class="mini-card-from">From </span>
-            <span class="mini-card-price">£4,600</span>
-            <span class="mini-card-from"> per person</span>
-          </div>
+          <p class="mini-card-region">Northern Norway</p>
+          <h4>Lofoten Islands Winter</h4>
+          <p>January on the Lofoten archipelago — deserted beaches, sea eagle safaris by RIB, and northern lights photography from private rorbuer cabins.</p>
+          <div><span class="mini-card-from">From </span><span class="mini-card-price">£5,600</span><span class="mini-card-from"> per person</span></div>
         </div>
       </div>
       <div class="mini-card">
-        <img class="mini-card-img" src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=500&q=80" alt="Okavango Delta wildlife safari" loading="lazy"/>
+        <img class="mini-card-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=80" alt="Stockholm archipelago wooden jetty at golden hour" loading="lazy"/>
         <div class="mini-card-body">
-          <p class="mini-card-region">Southern Africa</p>
-          <h4>Botswana Okavango Delta</h4>
-          <p>A private four-tent camp in an exclusive concession during peak dry season. Walking safaris and mokoro canoe trips.</p>
-          <div>
-            <span class="mini-card-from">From </span>
-            <span class="mini-card-price">£11,200</span>
-            <span class="mini-card-from"> per person</span>
-          </div>
+          <p class="mini-card-region">Sweden</p>
+          <h4>Stockholm Archipelago</h4>
+          <p>Seven nights split between Stockholm's Djurgården and a private sloop charter through the 30,000-island outer archipelago.</p>
+          <div><span class="mini-card-from">From </span><span class="mini-card-price">£4,800</span><span class="mini-card-from"> per person</span></div>
         </div>
       </div>
       <div class="mini-card">
-        <img class="mini-card-img" src="https://images.unsplash.com/photo-1518548419970-58e3b4079ab2?w=500&q=80" alt="Amalfi Coast Positano clifftop view" loading="lazy"/>
+        <img class="mini-card-img" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=500&q=80" alt="Midnight sun over Norwegian lake with mountain reflections" loading="lazy"/>
         <div class="mini-card-body">
-          <p class="mini-card-region">Mediterranean</p>
-          <h4>Amalfi Coast Villa</h4>
-          <p>A clifftop villa above Positano, sleeping six, with a private chef and wooden gozzo for coastal day trips.</p>
-          <div>
-            <span class="mini-card-from">From </span>
-            <span class="mini-card-price">£22,000</span>
-            <span class="mini-card-from"> whole villa/week</span>
-          </div>
+          <p class="mini-card-region">Western Norway</p>
+          <h4>Hardangerfjord Midnight Sun</h4>
+          <p>Five nights aboard a private 28-metre ketch on the Hardangerfjord in June, when the sun barely dips below the horizon.</p>
+          <div><span class="mini-card-from">From </span><span class="mini-card-price">£6,200</span><span class="mini-card-from"> per person</span></div>
         </div>
       </div>
       <div class="mini-card">
-        <img class="mini-card-img" src="https://images.unsplash.com/photo-1472396961693-142e6e269027?w=500&q=80" alt="Galápagos Islands wildlife and volcanic landscape" loading="lazy"/>
+        <img class="mini-card-img" src="https://images.unsplash.com/photo-1509356843151-3e7d96241e11?w=500&q=80" alt="Gothenburg Bohuslän coast with granite skerries and sea" loading="lazy"/>
         <div class="mini-card-body">
-          <p class="mini-card-region">Pacific Ocean</p>
-          <h4>Galápagos Private Charter</h4>
-          <p>A 12-day private yacht circumnavigation of the archipelago with a resident naturalist and underwater photographer.</p>
-          <div>
-            <span class="mini-card-from">From </span>
-            <span class="mini-card-price">£16,800</span>
-            <span class="mini-card-from"> per couple</span>
-          </div>
+          <p class="mini-card-region">Sweden</p>
+          <h4>Gothenburg & Bohuslän</h4>
+          <p>Six nights across Gothenburg's Haga district and a private island retreat on the Bohuslän granite coast, with kayaking through skerries.</p>
+          <div><span class="mini-card-from">From </span><span class="mini-card-price">£4,000</span><span class="mini-card-from"> per person</span></div>
         </div>
       </div>
     </div>
@@ -594,27 +386,26 @@
       <div class="hiw-step">
         <div class="hiw-number">01</div>
         <h3>Consultation</h3>
-        <p>A 45-minute call with your dedicated Travel Director to understand your vision, interests, travel style, and any specific requests.</p>
+        <p>A 45-minute call with your dedicated Nordic Travel Director to understand your vision, travel style, and any specific requests.</p>
       </div>
       <div class="hiw-step">
         <div class="hiw-number">02</div>
         <h3>Bespoke Proposal</h3>
-        <p>Within 72 hours, we deliver a fully costed, day-by-day itinerary tailored to your brief. No templates. Every detail is original.</p>
+        <p>Within 72 hours, a fully costed day-by-day itinerary tailored to your brief. No templates — every detail is original.</p>
       </div>
       <div class="hiw-step">
         <div class="hiw-number">03</div>
         <h3>Refinement</h3>
-        <p>We iterate until the itinerary is exactly right — adjusting pacing, accommodation, and experiences until you confirm it's perfect.</p>
+        <p>We iterate until every detail is right — adjusting pacing, accommodation, and experiences until you confirm it's perfect.</p>
       </div>
       <div class="hiw-step">
         <div class="hiw-number">04</div>
         <h3>Journey & Beyond</h3>
-        <p>Your Travel Director is reachable 24/7 throughout your trip. After your return, a personal debrief helps us improve every future journey.</p>
+        <p>Your Travel Director is reachable 24/7 throughout your trip. After your return, a personal debrief shapes every future journey.</p>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer id="contact">
     <div class="footer-grid">
       <div class="footer-brand">
@@ -632,11 +423,11 @@
       <div class="footer-col">
         <h4>Experiences</h4>
         <ul>
-          <li><a href="#signature">Maldives Atoll</a></li>
-          <li><a href="#signature">Norwegian Fjords</a></li>
-          <li><a href="#signature">Patagonia</a></li>
-          <li><a href="#signature">Kyoto</a></li>
-          <li><a href="#signature">Galápagos</a></li>
+          <li><a href="#signature">Geirangerfjord Yacht</a></li>
+          <li><a href="#signature">Tromsø Aurora</a></li>
+          <li><a href="#signature">Copenhagen</a></li>
+          <li><a href="#signature">Sweden Gastronomy</a></li>
+          <li><a href="#signature">Lofoten Islands</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -664,11 +455,7 @@
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
       document.querySelectorAll('.product-feature').forEach(card => {
-        if (type === 'all' || card.dataset.type === type) {
-          card.style.display = 'grid';
-        } else {
-          card.style.display = 'none';
-        }
+        card.style.display = (type === 'all' || card.dataset.type === type) ? 'grid' : 'none';
       });
     }
   </script>

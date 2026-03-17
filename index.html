@@ -3,30 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Faraway & Fine™ — Curated Luxury Travel Experiences</title>
-  <meta name="description" content="Faraway & Fine™ is a fictional luxury travel agency offering curated journeys to the world's most extraordinary destinations. Private villas, expedition yachts, and bespoke cultural immersions." />
+  <title>Faraway & Fine™ — Luxury Scandinavian Travel</title>
+  <meta name="description" content="Faraway & Fine™ is a fictional luxury travel agency specialising in bespoke journeys across Scandinavia — Norway, Sweden, Denmark, and beyond. Private fjord yachts, aurora wilderness camps, and Nordic cultural immersions." />
   <meta name="robots" content="index, follow" />
-  <!-- Open Graph -->
-  <meta property="og:title" content="Faraway & Fine™ — Curated Luxury Travel" />
-  <meta property="og:description" content="Discover Faraway & Fine™ — a fictional luxury travel brand. Handcrafted itineraries, private access, and unmatched service." />
+  <meta property="og:title" content="Faraway & Fine™ — Luxury Scandinavian Travel" />
+  <meta property="og:description" content="Discover Faraway & Fine™ — a fictional luxury Scandinavian travel brand. Handcrafted itineraries, private access, and unmatched Nordic service." />
   <meta property="og:type" content="website" />
-  <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "TravelAgency",
     "name": "Faraway & Fine™",
-    "description": "A fictional luxury travel agency (test site) specialising in bespoke journeys to extraordinary destinations worldwide.",
-    "url": "https://faraway-and-fine-test.github.io",
+    "description": "A fictional luxury travel agency (test site) specialising in bespoke journeys across Norway, Sweden, Denmark, and Scandinavia.",
+    "url": "https://hcalcutt2.github.io/farawayandfine",
     "foundingDate": "2024",
-    "areaServed": "Worldwide",
+    "areaServed": ["Norway", "Sweden", "Denmark", "Iceland", "Finland"],
     "priceRange": "$$$",
     "sameAs": []
   }
   </script>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* ── HERO ─── */
     .hero {
       position: relative;
       height: 100vh;
@@ -34,22 +31,19 @@
       align-items: center;
       overflow: hidden;
     }
-
     .hero-bg {
       position: absolute;
       inset: 0;
       background:
         linear-gradient(135deg, rgba(10,10,10,0.85) 0%, rgba(10,10,10,0.4) 60%, rgba(10,10,10,0.7) 100%),
-        url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1800&q=80') center/cover no-repeat;
+        url('https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=1800&q=80') center/cover no-repeat;
     }
-
     .hero-content {
       position: relative;
       z-index: 2;
       padding: 0 4rem;
       max-width: 900px;
     }
-
     .hero-eyebrow {
       font-size: 0.65rem;
       letter-spacing: 0.45em;
@@ -59,7 +53,6 @@
       opacity: 0;
       animation: fadeUp 1s ease 0.3s forwards;
     }
-
     .hero-title {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(3.5rem, 8vw, 7rem);
@@ -70,12 +63,7 @@
       opacity: 0;
       animation: fadeUp 1s ease 0.5s forwards;
     }
-
-    .hero-title em {
-      font-style: italic;
-      color: var(--gold-light);
-    }
-
+    .hero-title em { font-style: italic; color: var(--gold-light); }
     .hero-sub {
       font-size: 0.9rem;
       color: rgba(245, 240, 232, 0.75);
@@ -85,7 +73,6 @@
       opacity: 0;
       animation: fadeUp 1s ease 0.7s forwards;
     }
-
     .hero-actions {
       display: flex;
       gap: 1.5rem;
@@ -93,7 +80,6 @@
       opacity: 0;
       animation: fadeUp 1s ease 0.9s forwards;
     }
-
     .hero-scroll {
       position: absolute;
       bottom: 2.5rem;
@@ -106,32 +92,26 @@
       opacity: 0;
       animation: fadeUp 1s ease 1.2s forwards;
     }
-
     .hero-scroll span {
       font-size: 0.6rem;
       letter-spacing: 0.3em;
       text-transform: uppercase;
       color: var(--gold);
     }
-
     .scroll-line {
       width: 1px;
       height: 50px;
       background: linear-gradient(to bottom, var(--gold), transparent);
       animation: scrollPulse 2s ease-in-out infinite;
     }
-
     @keyframes scrollPulse {
-      0%, 100% { opacity: 0.3; transform: scaleY(1); }
-      50% { opacity: 1; transform: scaleY(1.1); }
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
     }
-
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
     }
-
-    /* ── STATS BAR ── */
     .stats-bar {
       background: var(--black);
       border-top: 1px solid rgba(201,168,76,0.15);
@@ -141,15 +121,12 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 2rem;
     }
-
     .stat {
       text-align: center;
       padding: 0 1rem;
       border-right: 1px solid rgba(255,255,255,0.07);
     }
-
     .stat:last-child { border-right: none; }
-
     .stat-number {
       font-family: 'Cormorant Garamond', serif;
       font-size: 2.8rem;
@@ -157,7 +134,6 @@
       color: var(--gold);
       line-height: 1;
     }
-
     .stat-label {
       font-size: 0.65rem;
       letter-spacing: 0.2em;
@@ -165,12 +141,7 @@
       color: var(--light-grey);
       margin-top: 0.5rem;
     }
-
-    /* ── DESTINATIONS ── */
-    .destinations {
-      padding: 8rem 4rem;
-    }
-
+    .destinations { padding: 8rem 4rem; }
     .destinations-header {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -178,23 +149,13 @@
       align-items: end;
       margin-bottom: 5rem;
     }
-
     .dest-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
     }
-
-    .dest-card {
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-    }
-
-    .dest-card:first-child {
-      grid-row: span 2;
-    }
-
+    .dest-card { position: relative; overflow: hidden; cursor: pointer; }
+    .dest-card:first-child { grid-row: span 2; }
     .dest-img {
       width: 100%;
       height: 280px;
@@ -203,16 +164,8 @@
       transition: transform 0.7s ease;
       background: var(--mid);
     }
-
-    .dest-card:first-child .dest-img {
-      height: 100%;
-      min-height: 580px;
-    }
-
-    .dest-card:hover .dest-img {
-      transform: scale(1.06);
-    }
-
+    .dest-card:first-child .dest-img { height: 100%; min-height: 580px; }
+    .dest-card:hover .dest-img { transform: scale(1.06); }
     .dest-overlay {
       position: absolute;
       inset: 0;
@@ -222,7 +175,6 @@
       justify-content: flex-end;
       padding: 2rem;
     }
-
     .dest-region {
       font-size: 0.6rem;
       letter-spacing: 0.3em;
@@ -230,21 +182,17 @@
       color: var(--gold);
       margin-bottom: 0.4rem;
     }
-
     .dest-name {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.8rem;
       font-weight: 300;
       color: var(--white);
     }
-
     .dest-from {
       font-size: 0.75rem;
       color: rgba(245,240,232,0.6);
       margin-top: 0.4rem;
     }
-
-    /* ── PHILOSOPHY ── */
     .philosophy {
       background: var(--dark-mid);
       padding: 8rem 4rem;
@@ -253,45 +201,24 @@
       gap: 6rem;
       align-items: center;
     }
-
-    .philosophy-img-wrap {
-      position: relative;
-    }
-
+    .philosophy-img-wrap { position: relative; }
     .philosophy-img-wrap::before {
       content: '';
       position: absolute;
-      top: -20px;
-      left: -20px;
-      right: 20px;
-      bottom: 20px;
+      top: -20px; left: -20px; right: 20px; bottom: 20px;
       border: 1px solid rgba(201,168,76,0.3);
       pointer-events: none;
     }
-
-    .philosophy-img {
-      width: 100%;
-      height: 520px;
-      object-fit: cover;
-      display: block;
-      background: var(--mid);
-    }
-
+    .philosophy-img { width: 100%; height: 520px; object-fit: cover; display: block; }
     .philosophy-content .section-label { margin-bottom: 1rem; }
     .philosophy-content .section-title { margin-bottom: 1.5rem; }
-
     .philosophy-content p {
       font-size: 0.85rem;
       color: var(--light-grey);
       line-height: 1.9;
       margin-bottom: 1.5rem;
     }
-
-    .philosophy-list {
-      list-style: none;
-      margin: 2rem 0;
-    }
-
+    .philosophy-list { list-style: none; margin: 2rem 0; }
     .philosophy-list li {
       font-size: 0.8rem;
       color: var(--off-white);
@@ -301,47 +228,18 @@
       align-items: center;
       gap: 1rem;
     }
-
-    .philosophy-list li::before {
-      content: '—';
-      color: var(--gold);
-      font-size: 0.9rem;
-    }
-
-    /* ── EXPERIENCES ── */
-    .experiences {
-      padding: 8rem 4rem;
-    }
-
-    .experiences-header {
-      text-align: center;
-      margin-bottom: 5rem;
-    }
-
-    .exp-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
-    }
-
+    .philosophy-list li::before { content: '—'; color: var(--gold); }
+    .experiences { padding: 8rem 4rem; }
+    .experiences-header { text-align: center; margin-bottom: 5rem; }
+    .exp-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
     .exp-card {
       padding: 2.5rem;
       border: 1px solid rgba(201,168,76,0.15);
       background: var(--dark-mid);
       transition: border-color 0.3s, transform 0.3s;
     }
-
-    .exp-card:hover {
-      border-color: var(--gold);
-      transform: translateY(-6px);
-    }
-
-    .exp-icon {
-      font-size: 1.8rem;
-      margin-bottom: 1.5rem;
-      display: block;
-    }
-
+    .exp-card:hover { border-color: var(--gold); transform: translateY(-6px); }
+    .exp-icon { font-size: 1.8rem; margin-bottom: 1.5rem; display: block; }
     .exp-card h3 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.4rem;
@@ -349,20 +247,8 @@
       color: var(--white);
       margin-bottom: 1rem;
     }
-
-    .exp-card p {
-      font-size: 0.78rem;
-      color: var(--light-grey);
-      line-height: 1.9;
-    }
-
-    /* ── TESTIMONIAL ── */
-    .testimonial-section {
-      background: var(--black);
-      padding: 7rem 4rem;
-      text-align: center;
-    }
-
+    .exp-card p { font-size: 0.78rem; color: var(--light-grey); line-height: 1.9; }
+    .testimonial-section { background: var(--black); padding: 7rem 4rem; text-align: center; }
     .testimonial-section blockquote {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(1.4rem, 3vw, 2.2rem);
@@ -373,46 +259,26 @@
       margin: 0 auto 2rem;
       line-height: 1.5;
     }
-
     .testimonial-author {
       font-size: 0.7rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--gold);
     }
-
-    /* ── CTA STRIP ── */
-    .cta-strip {
-      position: relative;
-      padding: 8rem 4rem;
-      text-align: center;
-      overflow: hidden;
-    }
-
+    .cta-strip { position: relative; padding: 8rem 4rem; text-align: center; overflow: hidden; }
     .cta-strip-bg {
       position: absolute;
       inset: 0;
       background:
         linear-gradient(rgba(10,10,10,0.75), rgba(10,10,10,0.75)),
-        url('https://images.unsplash.com/photo-1530521954074-e64f6810b32d?w=1800&q=80') center/cover no-repeat;
+        url('https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1800&q=80') center/cover no-repeat;
     }
-
-    .cta-strip-content {
-      position: relative;
-      z-index: 2;
-    }
-
-    .cta-strip .section-title { margin-bottom: 1rem; }
-
-    .cta-strip .section-subtitle {
-      margin: 0 auto 3rem;
-      text-align: center;
-    }
+    .cta-strip-content { position: relative; z-index: 2; }
+    .cta-strip .section-subtitle { margin: 0 auto 3rem; text-align: center; }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
   <nav>
     <a href="index.html" class="nav-logo">Faraway<span> &amp; Fine</span></a>
     <ul class="nav-links">
@@ -423,15 +289,12 @@
     </ul>
   </nav>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-content">
-      <p class="hero-eyebrow">Fictional Luxury Travel · Est. 2024 · Test Site</p>
-      <h1 class="hero-title">
-        The World's<br><em>Most Extraordinary</em><br>Journeys
-      </h1>
-      <p class="hero-sub">Faraway & Fine™ curates private access to places most travellers will never see. From Patagonian glacier expeditions to silent Kyoto retreats — we orchestrate the unrepeatable.</p>
+      <p class="hero-eyebrow">Fictional Luxury Travel · Scandinavia · Test Site</p>
+      <h1 class="hero-title">The North,<br><em>Completely</em><br>Uncompromised</h1>
+      <p class="hero-sub">Faraway & Fine™ curates private access to Scandinavia's most extraordinary places — from the silent fjords of western Norway to the candlelit alleyways of Copenhagen's oldest quarter.</p>
       <div class="hero-actions">
         <a href="product.html" class="btn-primary">Explore Experiences</a>
         <a href="deals.html" class="btn-outline">View Current Offers</a>
@@ -443,27 +306,13 @@
     </div>
   </section>
 
-  <!-- STATS BAR -->
   <div class="stats-bar">
-    <div class="stat">
-      <div class="stat-number">147</div>
-      <div class="stat-label">Destinations</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number">28</div>
-      <div class="stat-label">Years of Expertise</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number">4,200+</div>
-      <div class="stat-label">Journeys Crafted</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number">98%</div>
-      <div class="stat-label">Client Satisfaction</div>
-    </div>
+    <div class="stat"><div class="stat-number">5</div><div class="stat-label">Nordic Countries</div></div>
+    <div class="stat"><div class="stat-number">38</div><div class="stat-label">Destinations</div></div>
+    <div class="stat"><div class="stat-number">1,800+</div><div class="stat-label">Journeys Crafted</div></div>
+    <div class="stat"><div class="stat-number">98%</div><div class="stat-label">Client Satisfaction</div></div>
   </div>
 
-  <!-- DESTINATIONS -->
   <section class="destinations">
     <div class="destinations-header fade-in">
       <div>
@@ -472,95 +321,68 @@
         <h2 class="section-title">Signature<br>Destinations</h2>
       </div>
       <div>
-        <p class="section-subtitle">From the remote archipelagos of the Maldives to the silk-draped riads of Fez — our portfolio spans 147 destinations across six continents. Every location is personally vetted by our travel directors.</p>
+        <p class="section-subtitle">From the Lofoten archipelago to the rooftops of Gothenburg's Haga district — our portfolio spans 38 destinations across Norway, Sweden, Denmark, and beyond. Every location is personally vetted by our Nordic Travel Directors.</p>
         <br>
         <a href="product.html" class="btn-outline">All Destinations</a>
       </div>
     </div>
     <div class="dest-grid fade-in">
       <div class="dest-card">
-        <img
-          class="dest-img"
-          src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=800&q=80"
-          alt="Maldives overwater villa at sunset with turquoise lagoon"
-          loading="lazy"
-        />
+        <img class="dest-img" src="https://images.unsplash.com/photo-1513519245088-0e12902e35ca?w=800&q=80" alt="Norwegian fjord with dramatic cliffs and still water at dawn" loading="lazy"/>
         <div class="dest-overlay">
-          <span class="dest-region">Indian Ocean</span>
-          <h3 class="dest-name">Maldives Private Atoll</h3>
-          <p class="dest-from">From £12,400 per person</p>
+          <span class="dest-region">Western Norway</span>
+          <h3 class="dest-name">Geirangerfjord Private Charter</h3>
+          <p class="dest-from">From £8,400 per person</p>
         </div>
       </div>
       <div class="dest-card">
-        <img
-          class="dest-img"
-          src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80"
-          alt="Kyoto temple with autumn foliage and traditional architecture"
-          loading="lazy"
-        />
+        <img class="dest-img" src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=800&q=80" alt="Northern lights aurora borealis over snowy Lapland landscape" loading="lazy"/>
         <div class="dest-overlay">
-          <span class="dest-region">East Asia</span>
-          <h3 class="dest-name">Kyoto Private Retreat</h3>
-          <p class="dest-from">From £6,800 per person</p>
+          <span class="dest-region">Northern Norway</span>
+          <h3 class="dest-name">Tromsø Aurora Expedition</h3>
+          <p class="dest-from">From £5,200 per person</p>
         </div>
       </div>
       <div class="dest-card">
-        <img
-          class="dest-img"
-          src="https://images.unsplash.com/photo-1531761535209-180857e963b9?w=800&q=80"
-          alt="Patagonian mountains and glaciers with dramatic sky"
-          loading="lazy"
-        />
+        <img class="dest-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Stockholm old town Gamla Stan with colourful buildings at dusk" loading="lazy"/>
         <div class="dest-overlay">
-          <span class="dest-region">South America</span>
-          <h3 class="dest-name">Patagonia Expedition</h3>
-          <p class="dest-from">From £9,200 per person</p>
+          <span class="dest-region">Sweden</span>
+          <h3 class="dest-name">Stockholm & the Archipelago</h3>
+          <p class="dest-from">From £4,800 per person</p>
         </div>
       </div>
       <div class="dest-card">
-        <img
-          class="dest-img"
-          src="https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?w=800&q=80"
-          alt="Sahara desert dunes at golden hour in Morocco"
-          loading="lazy"
-        />
+        <img class="dest-img" src="https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=800&q=80" alt="Copenhagen Nyhavn canal with colourful townhouses" loading="lazy"/>
         <div class="dest-overlay">
-          <span class="dest-region">North Africa</span>
-          <h3 class="dest-name">Morocco Desert Immersion</h3>
-          <p class="dest-from">From £4,600 per person</p>
+          <span class="dest-region">Denmark</span>
+          <h3 class="dest-name">Copenhagen & North Zealand</h3>
+          <p class="dest-from">From £3,900 per person</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PHILOSOPHY -->
   <section class="philosophy">
     <div class="philosophy-img-wrap fade-in">
-      <img
-        class="philosophy-img"
-        src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80"
-        alt="Luxury camp overlooking mountain landscape at dusk"
-        loading="lazy"
-      />
+      <img class="philosophy-img" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=900&q=80" alt="Wooden rowing boat on a still Nordic lake surrounded by pine forest" loading="lazy"/>
     </div>
     <div class="philosophy-content fade-in">
       <p class="section-label">Our Philosophy</p>
       <span class="gold-line gold-line-left"></span>
-      <h2 class="section-title">Travel Without<br>Compromise</h2>
-      <p>Faraway & Fine™ was founded on a single belief: that the most meaningful journeys are those designed entirely around you. Not around a brochure. Not around a package. Around your curiosity, your pace, and your definition of extraordinary.</p>
-      <p>Each Faraway & Fine journey is assigned a dedicated Travel Director — an expert in their region who maintains personal relationships with hotels, guides, and local families to unlock experiences no booking engine can offer.</p>
+      <h2 class="section-title">The Nordic Way,<br>Done Properly</h2>
+      <p>Faraway & Fine™ was built around a single conviction: that Scandinavia rewards those who go slowly, go privately, and go with someone who truly knows the way. Not a tour group. Not a package. A journey shaped entirely around you.</p>
+      <p>Each journey is led by a dedicated Nordic Travel Director — a local expert who holds the keys to places that simply don't appear on any map or booking platform.</p>
       <ul class="philosophy-list">
-        <li>Private, after-hours access to iconic landmarks</li>
-        <li>Chartered helicopters, yachts, and vintage train carriages</li>
-        <li>Accommodation in heritage properties unavailable to the public</li>
-        <li>Curated encounters with local artisans and communities</li>
-        <li>24/7 in-destination concierge support</li>
+        <li>Private fjord crossings by traditional wooden faering boat</li>
+        <li>After-hours access to Scandinavian design museums and galleries</li>
+        <li>Stays in historic Swedish manor houses and Norwegian stave lodges</li>
+        <li>Foraging expeditions with Michelin-recognised Nordic chefs</li>
+        <li>24/7 in-destination Travel Director support</li>
       </ul>
       <a href="product.html" class="btn-primary">Discover How It Works</a>
     </div>
   </section>
 
-  <!-- EXPERIENCES -->
   <section class="experiences">
     <div class="experiences-header fade-in">
       <p class="section-label">What We Offer</p>
@@ -570,52 +392,47 @@
     <div class="exp-grid fade-in">
       <div class="exp-card">
         <span class="exp-icon">🛥️</span>
-        <h3>Expedition Yachts</h3>
-        <p>Navigate the Galápagos, the Norwegian fjords, or the Adriatic with a private crew of eight. Our fleet of expedition yachts ranges from 32 to 78 metres.</p>
+        <h3>Fjord Yacht Charters</h3>
+        <p>Private expedition yachts navigating Geirangerfjord, Nærøyfjord, and the Lofoten archipelago. Crews of six with onboard chefs serving fresh Nordic seafood.</p>
       </div>
       <div class="exp-card">
-        <span class="exp-icon">🏔️</span>
-        <h3>Remote Wilderness</h3>
-        <p>Tented camps in Antarctica, Himalayan lodges accessible only by helicopter, and exclusive wildlife concessions in the Okavango Delta.</p>
+        <span class="exp-icon">🌌</span>
+        <h3>Arctic Wilderness</h3>
+        <p>Northern lights camps above Tromsø, dog-sledding across the Finnmark plateau, and private ice-fishing lodges on frozen Norwegian lakes.</p>
       </div>
       <div class="exp-card">
         <span class="exp-icon">🏛️</span>
         <h3>Cultural Immersions</h3>
-        <p>Private viewings at the Louvre, dinner inside the Colosseum, and a stay in a 17th-century Kyoto machiya arranged exclusively for Faraway & Fine guests.</p>
+        <p>Private evening access to Copenhagen's Designmuseum Denmark, curator-led tours of the Gothenburg Museum of Art, and stays in Viking-era manor houses.</p>
       </div>
       <div class="exp-card">
         <span class="exp-icon">🍽️</span>
-        <h3>Gastronomy Journeys</h3>
-        <p>Trails through San Sebastián's Michelin constellation, truffle hunting in Périgord, and harvest immersions at private Barolo estates.</p>
+        <h3>Nordic Gastronomy</h3>
+        <p>Chef's table experiences at New Nordic restaurants in Copenhagen, foraging journeys through Swedish forests, and private aquavit tastings in Aalborg distilleries.</p>
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIAL -->
   <section class="testimonial-section fade-in">
     <span class="gold-line"></span>
-    <blockquote>
-      "Faraway & Fine arranged a private sunrise viewing of Angkor Wat with a single monk as our guide. No other agency had even suggested it was possible."
-    </blockquote>
-    <p class="testimonial-author">— Fictional Guest, Cambodia Journey, 2024</p>
+    <blockquote>"Faraway & Fine arranged a private midnight crossing of the Nærøyfjord in a restored faering boat. The silence was absolute. It was the finest hour of my travelling life."</blockquote>
+    <p class="testimonial-author">— Fictional Guest, Norway Fjord Journey, 2024</p>
     <br><br>
     <a href="deals.html" class="btn-outline">See Current Offers</a>
   </section>
 
-  <!-- CTA STRIP -->
   <section class="cta-strip">
     <div class="cta-strip-bg"></div>
     <div class="cta-strip-content fade-in">
       <p class="section-label">Begin Your Journey</p>
       <span class="gold-line"></span>
-      <h2 class="section-title">Where in the World<br>Calls to You?</h2>
-      <p class="section-subtitle">Speak with a Faraway & Fine Travel Director and begin designing a journey that exists nowhere else. Complimentary consultation, no obligation.</p>
+      <h2 class="section-title">Which Corner of the<br>North Calls to You?</h2>
+      <p class="section-subtitle">Speak with a Faraway & Fine Nordic Travel Director and begin designing a journey that exists nowhere else. Complimentary consultation, no obligation.</p>
       <br><br>
       <a href="#contact" class="btn-primary">Request a Consultation</a>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer id="contact">
     <div class="footer-grid">
       <div class="footer-brand">
@@ -633,11 +450,11 @@
       <div class="footer-col">
         <h4>Destinations</h4>
         <ul>
-          <li><a href="product.html">Maldives</a></li>
-          <li><a href="product.html">Kyoto</a></li>
-          <li><a href="product.html">Patagonia</a></li>
-          <li><a href="product.html">Morocco</a></li>
-          <li><a href="product.html">Galápagos</a></li>
+          <li><a href="product.html">Geirangerfjord</a></li>
+          <li><a href="product.html">Tromsø</a></li>
+          <li><a href="product.html">Stockholm</a></li>
+          <li><a href="product.html">Copenhagen</a></li>
+          <li><a href="product.html">Gothenburg</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -656,15 +473,9 @@
   </footer>
 
   <script>
-    // Intersection Observer for fade-in animations
     const observer = new IntersectionObserver((entries) => {
-      entries.forEach(el => {
-        if (el.isIntersecting) {
-          el.target.classList.add('visible');
-        }
-      });
+      entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
     }, { threshold: 0.1 });
-
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
   </script>
 </body>
