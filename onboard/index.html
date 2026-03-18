@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Onboard Life — Faraway & Fine™</title>
+  <meta name="description" content="Life aboard Faraway & Fine vessels — dining, spa, activities, and onboard experiences across MV Nordlys, SY Isfjord, and MV Kvitbjørn." />
+  <link rel="stylesheet" href="../style.css" /><link rel="stylesheet" href="../mega-nav.css" />
+  <style>
+    body{padding-top:110px}
+    .page-hero{padding:8rem 3rem 5rem;background:linear-gradient(to bottom,var(--black),var(--dark));border-bottom:1px solid rgba(201,168,76,0.15)}
+    .onboard-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;padding:4rem 3rem}
+    .ob-card{background:var(--dark-mid);border:1px solid rgba(255,255,255,0.07);overflow:hidden;text-decoration:none;display:block;transition:border-color 0.3s,transform 0.3s}
+    .ob-card:hover{border-color:rgba(201,168,76,0.4);transform:translateY(-4px)}
+    .ob-img{width:100%;height:200px;object-fit:cover;display:block}
+    .ob-body{padding:2rem}
+    .ob-body h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--white);margin-bottom:0.75rem}
+    .ob-body p{font-size:0.75rem;color:var(--light-grey);line-height:1.8}
+  </style>
+</head>
+<body>
+  <script src="../nav.js"></script><script>injectNav(1);</script>
+  <div class="breadcrumb"><a href="../index.html">Home</a><span>›</span><span class="current">Onboard</span></div>
+  <div class="page-hero">
+    <p class="section-label">Life at Sea & Ashore</p>
+    <span class="gold-line gold-line-left"></span>
+    <h1 class="section-title">Onboard Life</h1>
+    <p class="section-subtitle">Dining, activities, and wellness across the Faraway & Fine fleet.</p>
+  </div>
+  <div class="onboard-grid">
+    <a href="dining/index.html" class="ob-card fade-in"><img class="ob-img" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=600&q=70" alt="Nordic dining onboard" loading="lazy"/><div class="ob-body"><h3>Dining</h3><p>Six dining concepts across the fleet — from Nordic tasting menus to informal deck barbecues. All produce sourced daily from local farms and fishing boats.</p></div></a>
+    <a href="activities/index.html" class="ob-card fade-in"><img class="ob-img" src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=600&q=70" alt="Expedition activities Norway" loading="lazy"/><div class="ob-body"><h3>Activities</h3><p>Kayaking, hiking, dog-sledding, snowshoeing, RIB excursions, and wildlife photography. Every activity is led by a specialist guide.</p></div></a>
+    <a href="spa/index.html" class="ob-card fade-in"><img class="ob-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=70" alt="Spa wellness Nordic" loading="lazy"/><div class="ob-body"><h3>Spa & Wellness</h3><p>In-cabin massage treatments, cold water immersion, and a sauna programme on MV Kvitbjørn. Led by qualified therapists.</p></div></a>
+  </div>
+  <footer><div class="footer-grid" style="padding:3rem"><div class="footer-brand"><a href="../index.html" class="nav-logo" style="text-decoration:none;">Faraway<span style="color:var(--off-white);font-style:italic;"> &amp; Fine</span></a><p>Fictional. No real bookings.</p></div><div class="footer-col"><h4>Meta</h4><ul><li><a href="../llms.txt">llms.txt</a></li></ul></div></div><div class="footer-bottom" style="padding:1.5rem 3rem"><p>© 2024 Faraway & Fine™.</p></div></footer>
+  <script>const observer=new IntersectionObserver((e)=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:0.1});document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));</script>
+</body>
+</html>

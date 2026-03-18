@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find a Cruise — Faraway & Fine™</title>
+  <meta name="description" content="Search and browse all Faraway & Fine™ Scandinavian cruise departures. Filter by destination, vessel, duration, and departure month." />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../mega-nav.css" />
+  <style>
+    body { padding-top: 110px; }
+    .page-header { padding: 4rem 3rem 3rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .page-header h1 { font-family:'Cormorant Garamond',serif; font-size:clamp(2rem,4vw,3rem); font-weight:300; color:var(--white); margin-bottom:0.5rem; }
+    .page-header p { font-size:0.82rem; color:var(--light-grey); }
+    .cruise-list { padding: 2rem 3rem 5rem; display: flex; flex-direction: column; gap: 1.5rem; }
+    .sort-bar { display:flex; align-items:center; justify-content:space-between; margin-bottom:1rem; }
+    .sort-bar p { font-size:0.72rem; color:var(--light-grey); }
+    .sort-select { background:var(--dark-mid); border:1px solid rgba(255,255,255,0.12); color:var(--off-white); font-family:'Montserrat',sans-serif; font-size:0.65rem; padding:0.5rem 0.8rem; cursor:pointer; }
+    .availability-badge { display:inline-block; font-size:0.58rem; letter-spacing:0.15em; text-transform:uppercase; padding:0.25rem 0.6rem; margin-left:0.5rem; }
+    .avail-limited { background:rgba(200,80,80,0.15); color:#E07070; }
+    .avail-good { background:rgba(60,160,80,0.15); color:#70C080; }
+    .avail-sold { background:rgba(100,100,100,0.2); color:var(--light-grey); text-decoration:line-through; }
+  </style>
+</head>
+<body>
+  <script src="../nav.js"></script>
+  <script>injectNav(1);</script>
+
+  <div class="breadcrumb" style="margin-top:0">
+    <a href="../index.html">Home</a><span>›</span>
+    <span class="current">Find a Cruise</span>
+  </div>
+
+  <div class="page-header">
+    <h1>Find a Cruise</h1>
+    <p>All Faraway & Fine™ departures for 2024–2025. Prices shown are per person based on two guests sharing.</p>
+  </div>
+
+  <div class="search-filter-bar">
+    <select class="filter-select" onchange="filterCruises()">
+      <option value="">All Destinations</option>
+      <option value="norway">Norway</option>
+      <option value="sweden">Sweden</option>
+      <option value="denmark">Denmark</option>
+    </select>
+    <select class="filter-select" onchange="filterCruises()">
+      <option value="">All Vessels</option>
+      <option value="nordlys">MV Nordlys</option>
+      <option value="isfjord">SY Isfjord</option>
+      <option value="kvitbjorn">MV Kvitbjørn</option>
+    </select>
+    <select class="filter-select" onchange="filterCruises()">
+      <option value="">Any Duration</option>
+      <option value="5">5 nights</option>
+      <option value="6">6 nights</option>
+      <option value="7">7 nights</option>
+      <option value="8">8+ nights</option>
+    </select>
+    <select class="filter-select" onchange="filterCruises()">
+      <option value="">Any Month</option>
+      <option value="jan">January 2025</option>
+      <option value="feb">February 2025</option>
+      <option value="may">May 2025</option>
+      <option value="jun">June 2025</option>
+      <option value="jul">July 2025</option>
+      <option value="aug">August 2025</option>
+      <option value="sep">September 2025</option>
+    </select>
+    <span class="results-count" id="results-count">Showing 6 departures</span>
+  </div>
+
+  <div class="cruise-list">
+    <div class="sort-bar">
+      <p>Sorted by: Departure date</p>
+      <select class="sort-select"><option>Price: Low to High</option><option>Price: High to Low</option><option>Departure Date</option><option>Duration</option></select>
+    </div>
+
+    <!-- CRUISE 1 -->
+    <div class="cruise-card fade-in">
+      <img class="cruise-card-img" src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=400&q=70" alt="Tromsø northern lights aurora" loading="lazy"/>
+      <div class="cruise-card-body">
+        <p class="cruise-code">FF-NOR-25A <span class="availability-badge avail-limited">⚠ 2 cabins left</span></p>
+        <h3>Tromsø Aurora Wilderness Experience</h3>
+        <p class="cruise-ship-tag">MV Kvitbjørn · Northern Norway</p>
+        <div class="cruise-itinerary">
+          <span class="port-tag">Tromsø</span>
+          <span class="port-tag">Lyngen Alps</span>
+          <span class="port-tag">Aurora Cabin</span>
+          <span class="port-tag">Sami Lavvu</span>
+        </div>
+        <div class="cruise-card-meta">
+          <span><strong>6 nights</strong></span>
+          <span><strong>Departs:</strong> 14 Jan 2025</span>
+          <span><strong>Returns:</strong> 20 Jan 2025</span>
+          <span><strong>Vessel:</strong> MV Kvitbjørn</span>
+        </div>
+      </div>
+      <div class="cruise-card-price">
+        <!-- NOTE: This price (£4,950) differs from product.html (£5,200) deliberately -->
+        <span class="cruise-price-from">Interior from</span>
+        <span class="cruise-price-amount">£4,950</span>
+        <span class="cruise-price-pp">per person</span>
+        <a href="FF-NOR-25A/index.html" class="btn-primary" style="font-size:0.62rem;padding:0.75rem 1.2rem;">View & Book</a>
+      </div>
+    </div>
+
+    <!-- CRUISE 2 -->
+    <div class="cruise-card fade-in">
+      <img class="cruise-card-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&q=70" alt="Lofoten Islands Norway winter" loading="lazy"/>
+      <div class="cruise-card-body">
+        <p class="cruise-code">FF-NOR-24B <span class="availability-badge avail-limited">⚠ Last departure</span></p>
+        <h3>Lofoten Islands Winter Expedition</h3>
+        <p class="cruise-ship-tag">MV Kvitbjørn · Northern Norway</p>
+        <div class="cruise-itinerary">
+          <span class="port-tag">Svolvær</span>
+          <span class="port-tag">Henningsvær</span>
+          <span class="port-tag">Reine</span>
+          <span class="port-tag">Å</span>
+          <span class="port-tag">Værøy</span>
+        </div>
+        <div class="cruise-card-meta">
+          <span><strong>8 nights</strong></span>
+          <span><strong>Departs:</strong> 8 Jan 2025</span>
+          <span><strong>Returns:</strong> 16 Jan 2025</span>
+          <span><strong>Vessel:</strong> MV Kvitbjørn</span>
+        </div>
+      </div>
+      <div class="cruise-card-price">
+        <!-- NOTE: This price (£5,400) differs from deals.html (£5,600) and destination page (£5,800) -->
+        <span class="cruise-price-was">£5,600</span>
+        <span class="cruise-price-from">Now from</span>
+        <span class="cruise-price-amount">£5,400</span>
+        <span class="cruise-price-pp">per person</span>
+        <a href="FF-NOR-24B/index.html" class="btn-primary" style="font-size:0.62rem;padding:0.75rem 1.2rem;">View & Book</a>
+      </div>
+    </div>
+
+    <!-- CRUISE 3 -->
+    <div class="cruise-card fade-in">
+      <img class="cruise-card-img" src="https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=400&q=70" alt="Copenhagen Nyhavn canal" loading="lazy"/>
+      <div class="cruise-card-body">
+        <p class="cruise-code">FF-DEN-24A <span class="availability-badge avail-good">✓ Available</span></p>
+        <h3>Copenhagen Cultural Immersion</h3>
+        <p class="cruise-ship-tag">Land Programme · Denmark</p>
+        <div class="cruise-itinerary">
+          <span class="port-tag">Copenhagen</span>
+          <span class="port-tag">Frederiksstaden</span>
+          <span class="port-tag">Helsingør</span>
+          <span class="port-tag">Torvehallerne</span>
+        </div>
+        <div class="cruise-card-meta">
+          <span><strong>5 nights</strong></span>
+          <span><strong>Departs:</strong> Flexible</span>
+          <span><strong>Returns:</strong> +5 nights</span>
+          <span><strong>Type:</strong> Land Programme</span>
+        </div>
+      </div>
+      <div class="cruise-card-price">
+        <!-- NOTE: £3,650 — yet another price, differs from product.html (£3,900), destination (£4,200), deals (£3,200 sale) -->
+        <span class="cruise-price-from">From</span>
+        <span class="cruise-price-amount">£3,650</span>
+        <span class="cruise-price-pp">per person</span>
+        <a href="FF-DEN-24A/index.html" class="btn-primary" style="font-size:0.62rem;padding:0.75rem 1.2rem;">View & Book</a>
+      </div>
+    </div>
+
+    <!-- CRUISE 4 -->
+    <div class="cruise-card fade-in">
+      <img class="cruise-card-img" src="https://images.unsplash.com/photo-1513519245088-0e12902e35ca?w=400&q=70" alt="Geirangerfjord Norway" loading="lazy"/>
+      <div class="cruise-card-body">
+        <p class="cruise-code">FF-NOR-24A <span class="availability-badge avail-good">✓ Available</span></p>
+        <h3>Geirangerfjord & Nærøyfjord Private Yacht</h3>
+        <p class="cruise-ship-tag">MV Nordlys · Western Norway</p>
+        <div class="cruise-itinerary">
+          <span class="port-tag">Ålesund</span>
+          <span class="port-tag">Geiranger</span>
+          <span class="port-tag">Seven Sisters</span>
+          <span class="port-tag">Nærøyfjord</span>
+          <span class="port-tag">Flåm</span>
+        </div>
+        <div class="cruise-card-meta">
+          <span><strong>7 nights</strong></span>
+          <span><strong>Departs:</strong> May–Sep 2025</span>
+          <span><strong>Vessel:</strong> MV Nordlys</span>
+          <span><strong>Max:</strong> 6 guests</span>
+        </div>
+      </div>
+      <div class="cruise-card-price">
+        <!-- NOTE: £7,950 — yet another price variant -->
+        <span class="cruise-price-from">Interior from</span>
+        <span class="cruise-price-amount">£7,950</span>
+        <span class="cruise-price-pp">per person</span>
+        <a href="FF-NOR-24A/index.html" class="btn-primary" style="font-size:0.62rem;padding:0.75rem 1.2rem;">View & Book</a>
+      </div>
+    </div>
+
+    <!-- CRUISE 5 -->
+    <div class="cruise-card fade-in">
+      <img class="cruise-card-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=70" alt="Stockholm archipelago Sweden" loading="lazy"/>
+      <div class="cruise-card-body">
+        <p class="cruise-code">FF-SWE-24A <span class="availability-badge avail-good">✓ Available</span></p>
+        <h3>Stockholm & the Archipelago</h3>
+        <p class="cruise-ship-tag">SY Isfjord · Sweden</p>
+        <div class="cruise-itinerary">
+          <span class="port-tag">Stockholm</span>
+          <span class="port-tag">Djurgårdsvägen</span>
+          <span class="port-tag">Sandhamn</span>
+          <span class="port-tag">Utö</span>
+        </div>
+        <div class="cruise-card-meta">
+          <span><strong>7 nights</strong></span>
+          <span><strong>Departs:</strong> May–Sep 2025</span>
+          <span><strong>Vessel:</strong> SY Isfjord</span>
+          <span><strong>Max:</strong> 4 guests</span>
+        </div>
+      </div>
+      <div class="cruise-card-price">
+        <!-- NOTE: £4,600 — differs from product.html (£4,800) -->
+        <span class="cruise-price-from">From</span>
+        <span class="cruise-price-amount">£4,600</span>
+        <span class="cruise-price-pp">per person</span>
+        <a href="FF-SWE-24A/index.html" class="btn-primary" style="font-size:0.62rem;padding:0.75rem 1.2rem;">View & Book</a>
+      </div>
+    </div>
+
+    <!-- CRUISE 6 -->
+    <div class="cruise-card fade-in">
+      <img class="cruise-card-img" src="https://images.unsplash.com/photo-1509356843151-3e7d96241e11?w=400&q=70" alt="Gothenburg harbour Sweden" loading="lazy"/>
+      <div class="cruise-card-body">
+        <p class="cruise-code">FF-SWE-24B <span class="availability-badge avail-good">✓ Available</span></p>
+        <h3>Sweden New Nordic Gastronomy Journey</h3>
+        <p class="cruise-ship-tag">Land Programme · Sweden</p>
+        <div class="cruise-itinerary">
+          <span class="port-tag">Stockholm</span>
+          <span class="port-tag">Sörmland</span>
+          <span class="port-tag">Gothenburg</span>
+          <span class="port-tag">Malmö</span>
+          <span class="port-tag">Dalarna</span>
+        </div>
+        <div class="cruise-card-meta">
+          <span><strong>7 nights</strong></span>
+          <span><strong>Departs:</strong> Apr–Oct 2025</span>
+          <span><strong>Type:</strong> Land Programme</span>
+          <span><strong>Max:</strong> 4 guests</span>
+        </div>
+      </div>
+      <div class="cruise-card-price">
+        <span class="cruise-price-from">From</span>
+        <span class="cruise-price-amount">£5,800</span>
+        <span class="cruise-price-pp">per person</span>
+        <a href="FF-SWE-24B/index.html" class="btn-primary" style="font-size:0.62rem;padding:0.75rem 1.2rem;">View & Book</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-grid" style="padding:4rem 3rem 2rem">
+      <div class="footer-brand"><a href="../index.html" class="nav-logo" style="text-decoration:none;">Faraway<span style="color:var(--off-white);font-style:italic;"> &amp; Fine</span></a><p>Faraway & Fine™ is a fictional luxury travel brand. No real bookings are taken.</p></div>
+      <div class="footer-col"><h4>Find a Cruise</h4><ul><li><a href="FF-NOR-24A/index.html">FF-NOR-24A: Geirangerfjord</a></li><li><a href="FF-NOR-24B/index.html">FF-NOR-24B: Lofoten</a></li><li><a href="FF-NOR-25A/index.html">FF-NOR-25A: Tromsø Aurora</a></li><li><a href="FF-DEN-24A/index.html">FF-DEN-24A: Copenhagen</a></li><li><a href="FF-SWE-24A/index.html">FF-SWE-24A: Stockholm</a></li><li><a href="FF-SWE-24B/index.html">FF-SWE-24B: Gastronomy</a></li></ul></div>
+      <div class="footer-col"><h4>Offers</h4><ul><li><a href="../offers/late-deals/index.html">Late Deals</a></li><li><a href="../offers/early-booking/index.html">Early Booking</a></li><li><a href="../offers/all-inclusive/index.html">All-Inclusive</a></li></ul></div>
+      <div class="footer-col"><h4>Meta</h4><ul><li><a href="../llms.txt">llms.txt</a></li><li><a href="../sitemap.xml">Sitemap</a></li></ul></div>
+    </div>
+    <div class="footer-bottom" style="padding:1.5rem 3rem"><p>© 2024 Faraway & Fine™. All content fictional.</p><p class="footer-note">Test site · LLM experiment</p></div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((e) => { e.forEach(el => { if(el.isIntersecting) el.target.classList.add('visible'); }); }, {threshold:0.05});
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

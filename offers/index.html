@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Offers & Deals — Faraway & Fine™</title>
+  <meta name="description" content="All current Faraway & Fine™ offers — late deals, early booking discounts, and all-inclusive packages on Scandinavian luxury travel." />
+  <link rel="stylesheet" href="../style.css" /><link rel="stylesheet" href="../mega-nav.css" />
+  <style>
+    body{padding-top:110px}
+    .page-hero{padding:8rem 3rem 5rem;background:linear-gradient(to bottom,var(--black),var(--dark));border-bottom:1px solid rgba(201,168,76,0.15)}
+    .offers-body{padding:4rem 3rem}
+    .offers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-bottom:4rem}
+    .offer-hub-card{background:var(--dark-mid);border:1px solid rgba(255,255,255,0.07);overflow:hidden;text-decoration:none;display:block;transition:border-color 0.3s,transform 0.3s}
+    .offer-hub-card:hover{border-color:rgba(201,168,76,0.4);transform:translateY(-4px)}
+    .offer-hub-img{width:100%;height:220px;object-fit:cover;display:block}
+    .offer-hub-body{padding:2rem}
+    .offer-hub-body h3{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--white);margin-bottom:0.75rem}
+    .offer-hub-body p{font-size:0.78rem;color:var(--light-grey);line-height:1.8}
+    .offer-hub-tag{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem;display:block}
+  </style>
+</head>
+<body>
+  <script src="../nav.js"></script><script>injectNav(1);</script>
+  <div class="breadcrumb"><a href="../index.html">Home</a><span>›</span><span class="current">Offers</span></div>
+  <div class="page-hero">
+    <p class="section-label">Current Offers</p>
+    <span class="gold-line gold-line-left"></span>
+    <h1 class="section-title">Offers &<br>Promotions</h1>
+    <p class="section-subtitle">Time-limited deals on Faraway & Fine Scandinavian journeys — late availability, early booking savings, and all-inclusive packages.</p>
+  </div>
+  <div class="offers-body">
+    <div class="offers-grid">
+      <a href="late-deals/index.html" class="offer-hub-card fade-in">
+        <img class="offer-hub-img" src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=700&q=70" alt="Aurora northern lights late deal" loading="lazy"/>
+        <div class="offer-hub-body">
+          <span class="offer-hub-tag">🔴 Urgent — Limited Time</span>
+          <h3>Late Deals</h3>
+          <p>Last-minute availability at reduced prices. Departures within the next 6 weeks. Book by midnight to secure.</p>
+        </div>
+      </a>
+      <a href="early-booking/index.html" class="offer-hub-card fade-in">
+        <img class="offer-hub-img" src="https://images.unsplash.com/photo-1513519245088-0e12902e35ca?w=700&q=70" alt="Geirangerfjord early booking" loading="lazy"/>
+        <div class="offer-hub-body">
+          <span class="offer-hub-tag">Save up to £1,600 per couple</span>
+          <h3>Early Booking</h3>
+          <p>Book your 2025 departure before 28 February and save up to 15% on selected journeys. Plus a £400 spa credit.</p>
+        </div>
+      </a>
+      <a href="all-inclusive/index.html" class="offer-hub-card fade-in">
+        <img class="offer-hub-img" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=700&q=70" alt="All inclusive Nordic package" loading="lazy"/>
+        <div class="offer-hub-body">
+          <span class="offer-hub-tag">Everything included</span>
+          <h3>All-Inclusive Packages</h3>
+          <p>Cabin, port fees, insurance, gratuities, and transfers bundled into a single price. No surprises at checkout.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+  <footer><div class="footer-grid" style="padding:3rem"><div class="footer-brand"><a href="../index.html" class="nav-logo" style="text-decoration:none;">Faraway<span style="color:var(--off-white);font-style:italic;"> &amp; Fine</span></a><p>Fictional. No real bookings.</p></div><div class="footer-col"><h4>Offers</h4><ul><li><a href="late-deals/index.html">Late Deals</a></li><li><a href="early-booking/index.html">Early Booking</a></li><li><a href="all-inclusive/index.html">All-Inclusive</a></li></ul></div><div class="footer-col"><h4>Meta</h4><ul><li><a href="../llms.txt">llms.txt</a></li></ul></div></div><div class="footer-bottom" style="padding:1.5rem 3rem"><p>© 2024 Faraway & Fine™. All content fictional.</p></div></footer>
+  <script>const observer=new IntersectionObserver((e)=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:0.1});document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));</script>
+</body>
+</html>

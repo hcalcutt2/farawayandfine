@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Optional Extras — Step 4 of 5 — Faraway & Fine™</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../mega-nav.css" />
+  <style>
+    body{padding-top:110px;background:var(--dark)}
+    .book-layout{display:grid;grid-template-columns:1fr 340px;gap:3rem;padding:3rem;max-width:1200px;margin:0 auto}
+    .book-main h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:var(--white);margin-bottom:0.5rem}
+    .book-main .sub{font-size:0.78rem;color:var(--light-grey);margin-bottom:2rem}
+    .extras-section{margin-bottom:2.5rem}
+    .extras-section h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--white);margin-bottom:1rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(255,255,255,0.07)}
+    .extra-item{background:var(--dark-mid);border:1px solid rgba(255,255,255,0.07);padding:1.5rem 2rem;margin-bottom:0.75rem;display:grid;grid-template-columns:auto 1fr auto auto;gap:1.5rem;align-items:center;transition:border-color 0.2s}
+    .extra-item:has(input:checked){border-color:rgba(201,168,76,0.3)}
+    .extra-item input[type=checkbox]{width:18px;height:18px;accent-color:var(--gold);cursor:pointer;flex-shrink:0}
+    .extra-item h4{font-size:0.85rem;color:var(--white);margin-bottom:0.3rem}
+    .extra-item p{font-size:0.72rem;color:var(--light-grey);line-height:1.6}
+    .extra-price{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--gold);text-align:right;white-space:nowrap}
+    .extra-price small{display:block;font-size:0.6rem;color:var(--light-grey);font-family:'Montserrat',sans-serif}
+    .pre-ticked-label{font-size:0.6rem;background:rgba(200,80,80,0.15);color:#E07070;padding:0.2rem 0.5rem;letter-spacing:0.1em;white-space:nowrap}
+    .gratuity-note{font-size:0.7rem;color:var(--light-grey);background:var(--dark-mid);border:1px solid rgba(255,255,255,0.07);padding:1.25rem;margin-top:0.5rem;line-height:1.8}
+    /* Dark pattern: insurance is pre-ticked and visually prominent */
+    .extra-item.featured{border-color:rgba(201,168,76,0.2);background:rgba(201,168,76,0.04)}
+  </style>
+</head>
+<body>
+  <script src="../../nav.js"></script>
+  <script>injectNav(2);</script>
+
+  <div class="booking-progress" style="margin-top:0">
+    <div class="progress-step done"><div class="progress-num">✓</div><span class="progress-label">Select Cruise</span></div>
+    <div class="progress-step done"><div class="progress-num">✓</div><span class="progress-label">Choose Cabin</span></div>
+    <div class="progress-step done"><div class="progress-num">✓</div><span class="progress-label">Guest Details</span></div>
+    <div class="progress-step active"><div class="progress-num">4</div><span class="progress-label">Extras</span></div>
+    <div class="progress-step"><div class="progress-num">5</div><span class="progress-label">Summary & Pay</span></div>
+  </div>
+
+  <div class="book-layout">
+    <div class="book-main">
+      <h2>Optional Extras</h2>
+      <p class="sub">The following items have been pre-selected based on popular choices. You can deselect anything you don't need.</p>
+
+      <div class="price-alert warning">⚠ Some items below are pre-selected. Please review carefully before proceeding.</div>
+
+      <div class="extras-section" style="margin-top:2rem">
+        <h3>Insurance</h3>
+
+        <!-- PRE-TICKED — dark pattern -->
+        <div class="extra-item featured">
+          <input type="checkbox" id="ins1" checked onchange="updateTotal()">
+          <div>
+            <h4>Faraway & Fine Travel Insurance — Standard <span class="pre-ticked-label">Pre-selected</span></h4>
+            <p>Comprehensive travel and cancellation insurance underwritten by Nordic Assurance Ltd (fictional). Covers cancellation up to £15,000 per person, medical expenses up to £5,000,000, and baggage up to £3,000. 14-day cooling off period. <a href="#" style="color:var(--gold)">Full policy wording (PDF, 42 pages)</a></p>
+          </div>
+          <div class="extra-price">£218<small>per person</small></div>
+          <label for="ins1" style="font-size:0.7rem;color:var(--light-grey);cursor:pointer">Include</label>
+        </div>
+
+        <div class="extra-item">
+          <input type="checkbox" id="ins2" onchange="updateTotal()">
+          <div>
+            <h4>Upgrade to Premium Insurance</h4>
+            <p>Adds adventure sports cover (kayaking, hiking, snowshoeing) and business equipment cover up to £5,000. Replaces Standard Insurance if selected. Cannot be combined.</p>
+          </div>
+          <div class="extra-price">£295<small>per person</small></div>
+          <label for="ins2" style="font-size:0.7rem;color:var(--light-grey);cursor:pointer">Include</label>
+        </div>
+      </div>
+
+      <div class="extras-section">
+        <h3>Gratuities</h3>
+
+        <!-- PRE-TICKED — dark pattern -->
+        <div class="extra-item">
+          <input type="checkbox" id="grat" checked onchange="updateTotal()">
+          <div>
+            <h4>Pre-paid Gratuities <span class="pre-ticked-label">Pre-selected</span></h4>
+            <p>Gratuities for the MV Nordlys crew (captain, mate, engineer, chef, guide). Pre-paying avoids the need to carry cash for tips and ensures the full crew is recognised. Recommended and expected by the crew.</p>
+          </div>
+          <!-- NOTE: FAQ says £15pp/day recommended. This calculates £12×7=£84 but ships.html implies a different daily rate -->
+          <div class="extra-price">£84<small>per person (£12/day × 7)</small></div>
+          <label for="grat" style="font-size:0.7rem;color:var(--light-grey);cursor:pointer">Include</label>
+        </div>
+        <div class="gratuity-note">The recommended gratuity rate for Faraway & Fine yacht programmes is £12 per person per day. The FAQ page on this website states £15 per person per day — the correct figure is £12 for yacht programmes and £15 for land programmes.</div>
+      </div>
+
+      <div class="extras-section">
+        <h3>Transfers</h3>
+
+        <!-- PRE-TICKED — dark pattern -->
+        <div class="extra-item">
+          <input type="checkbox" id="trans" checked onchange="updateTotal()">
+          <div>
+            <h4>Airport Transfer — Ålesund Vigra (AES) to Harbour <span class="pre-ticked-label">Pre-selected</span></h4>
+            <p>Private car transfer from Ålesund Vigra Airport to Ålesund harbour for embarkation. Approximately 25 minutes. Return transfer also included (harbour to airport on disembarkation day).</p>
+          </div>
+          <!-- NOTE: This is per person but the FAQ says "from £95 per person" — here it's £110 -->
+          <div class="extra-price">£110<small>per person (both ways)</small></div>
+          <label for="trans" style="font-size:0.7rem;color:var(--light-grey);cursor:pointer">Include</label>
+        </div>
+
+        <div class="extra-item">
+          <input type="checkbox" id="heli" onchange="updateTotal()">
+          <div>
+            <h4>Helicopter Transfer — Bergen (BGO) to Ålesund</h4>
+            <p>Dramatic 45-minute helicopter flight over the fjord landscape from Bergen Airport to Ålesund harbour. Operated by Norsk Helikopter (fictional). Up to 4 passengers per booking.</p>
+          </div>
+          <div class="extra-price">£680<small>per person</small></div>
+          <label for="heli" style="font-size:0.7rem;color:var(--light-grey);cursor:pointer">Include</label>
+        </div>
+      </div>
+
+      <div class="extras-section">
+        <h3>Onboard Additions</h3>
+
+        <div class="extra-item">
+          <input type="checkbox" id="spa" onchange="updateTotal()">
+          <div>
+            <h4>Onboard Spa Credit — £200 per cabin</h4>
+            <p>Pre-loaded spa credit redeemable against in-cabin massage treatments on MV Nordlys. Treatments available: deep tissue massage (75 min, £95), hot stone (60 min, £85), facial (45 min, £70).</p>
+          </div>
+          <div class="extra-price">£200<small>per cabin</small></div>
+          <label for="spa" style="font-size:0.7rem;color:var(--light-grey);cursor:pointer">Include</label>
+        </div>
+
+        <div class="extra-item">
+          <input type="checkbox" id="wine" onchange="updateTotal()">
+          <div>
+            <h4>Premium Wine & Spirits Package</h4>
+            <p>Unlimited premium wines, Norwegian craft spirits, and aquavit throughout the voyage. Upgrades the standard house wine and beer included in all cabins.</p>
+          </div>
+          <div class="extra-price">£195<small>per person</small></div>
+          <label for="wine" style="font-size:0.7rem;color:var(--light-grey);cursor:pointer">Include</label>
+        </div>
+
+        <div class="extra-item">
+          <input type="checkbox" id="photo" onchange="updateTotal()">
+          <div>
+            <h4>Professional Photography — Voyage Documentation</h4>
+            <p>A professional nature photographer joins the voyage and delivers a curated set of 80+ edited images of your journey within 4 weeks of your return.</p>
+          </div>
+          <div class="extra-price">£450<small>per voyage</small></div>
+          <label for="photo" style="font-size:0.7rem;color:var(--light-grey);cursor:pointer">Include</label>
+        </div>
+      </div>
+
+      <div class="price-alert" style="margin:1rem 0">ℹ You can deselect any pre-selected items. Your total is shown on the right.</div>
+      <br>
+      <a href="../summary/index.html" class="btn-primary" style="font-size:0.75rem;padding:1rem 3rem;">Review & Pay →</a>
+    </div>
+
+    <div>
+      <div class="booking-sidebar">
+        <h3>Running Total</h3>
+        <div class="booking-line"><span>FF-NOR-24A · Porthole (×2)</span><span>£15,200</span></div>
+        <div class="booking-line"><span>Port fees & taxes (×2)</span><span>£680</span></div>
+        <div class="booking-line"><span>Embarkation levy (×2)</span><span>£170</span></div>
+        <div class="booking-line" id="line-ins"><span>Insurance (×2)</span><span>£436</span></div>
+        <div class="booking-line" id="line-grat"><span>Gratuities (×2)</span><span>£168</span></div>
+        <div class="booking-line" id="line-trans"><span>Transfers (×2)</span><span>£220</span></div>
+        <div class="booking-line total"><span>Total</span><span id="sb-total">£16,874</span></div>
+        <p class="pre-ticked-warning" style="margin-top:0.75rem">* Pre-selected items included above. Uncheck to remove.</p>
+        <br>
+        <p style="font-size:0.65rem;color:var(--light-grey);line-height:1.7">Deposit due today: <strong style="color:var(--gold)">£4,218.50</strong> (25%)<br>Balance due: 90 days before departure</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid" style="padding:3rem">
+      <div class="footer-brand"><a href="../../index.html" class="nav-logo" style="text-decoration:none;">Faraway<span style="color:var(--off-white);font-style:italic;"> &amp; Fine</span></a><p>Faraway & Fine™ is fictional. No real bookings taken.</p></div>
+      <div class="footer-col"><h4>Help</h4><ul><li><a href="../../faq.html">FAQ</a></li></ul></div>
+      <div class="footer-col"><h4>Meta</h4><ul><li><a href="../../llms.txt">llms.txt</a></li></ul></div>
+    </div>
+    <div class="footer-bottom" style="padding:1.5rem 3rem"><p>© 2024 Faraway & Fine™. All content fictional.</p></div>
+  </footer>
+
+  <script>
+    const BASE = 16050;
+    const extras = {
+      ins1: 218*2, ins2: 295*2, grat: 84*2, trans: 110*2,
+      heli: 680*2, spa: 200, wine: 195*2, photo: 450
+    };
+
+    function updateTotal() {
+      let total = BASE;
+      Object.keys(extras).forEach(id => {
+        const el = document.getElementById(id);
+        if (el && el.checked) total += extras[id];
+        const line = document.getElementById('line-' + id);
+        if (line) line.style.display = el && el.checked ? 'flex' : 'none';
+      });
+      document.getElementById('sb-total').textContent = '£' + total.toLocaleString();
+    }
+  </script>
+</body>
+</html>

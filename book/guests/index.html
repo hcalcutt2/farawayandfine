@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guest Details — Step 3 of 5 — Faraway & Fine™</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../mega-nav.css" />
+  <style>
+    body{padding-top:110px;background:var(--dark)}
+    .book-layout{display:grid;grid-template-columns:1fr 340px;gap:3rem;padding:3rem;max-width:1200px;margin:0 auto}
+    .book-main h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:var(--white);margin-bottom:0.5rem}
+    .book-main .sub{font-size:0.78rem;color:var(--light-grey);margin-bottom:2rem}
+    .guest-section{background:var(--dark-mid);border:1px solid rgba(255,255,255,0.07);padding:2rem;margin-bottom:1.5rem}
+    .guest-section h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--white);margin-bottom:1.5rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(255,255,255,0.07)}
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+    .form-group{display:flex;flex-direction:column;gap:0.4rem}
+    .form-group.full{grid-column:1/-1}
+    .form-group label{font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold)}
+    .form-group input,.form-group select{background:var(--mid);border:1px solid rgba(255,255,255,0.12);color:var(--off-white);font-family:'Montserrat',sans-serif;font-size:0.78rem;padding:0.75rem 1rem;outline:none;transition:border-color 0.2s}
+    .form-group input:focus,.form-group select:focus{border-color:var(--gold)}
+    .form-group input::placeholder{color:var(--light-grey)}
+    .fee-reveal{background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.25);padding:1.5rem 2rem;margin:2rem 0}
+    .fee-reveal h4{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+    .fee-line{display:flex;justify-content:space-between;font-size:0.78rem;padding:0.5rem 0;border-bottom:1px solid rgba(255,255,255,0.05)}
+    .fee-line span:first-child{color:var(--light-grey)}
+    .fee-line span:last-child{color:var(--off-white)}
+    .fee-total{font-weight:600;border-bottom:none;padding-top:0.75rem;margin-top:0.25rem}
+    .fee-total span{color:var(--gold)!important;font-family:'Cormorant Garamond',serif;font-size:1.1rem}
+  </style>
+</head>
+<body>
+  <script src="../../nav.js"></script>
+  <script>injectNav(2);</script>
+
+  <div class="booking-progress" style="margin-top:0">
+    <div class="progress-step done"><div class="progress-num">✓</div><span class="progress-label">Select Cruise</span></div>
+    <div class="progress-step done"><div class="progress-num">✓</div><span class="progress-label">Choose Cabin</span></div>
+    <div class="progress-step active"><div class="progress-num">3</div><span class="progress-label">Guest Details</span></div>
+    <div class="progress-step"><div class="progress-num">4</div><span class="progress-label">Extras</span></div>
+    <div class="progress-step"><div class="progress-num">5</div><span class="progress-label">Summary & Pay</span></div>
+  </div>
+
+  <div class="book-layout">
+    <div class="book-main">
+      <h2>Guest Details</h2>
+      <p class="sub">FF-NOR-24A · Porthole Cabin · 10 May 2025 · 2 adults</p>
+
+      <!-- PORT FEES REVEALED HERE FOR THE FIRST TIME IN FULL -->
+      <div class="fee-reveal">
+        <h4>Price Update — Port Fees & Taxes Now Added</h4>
+        <div class="fee-line"><span>Cabin cost (Porthole · 2 guests)</span><span>£15,200</span></div>
+        <div class="fee-line"><span>Port fees & taxes (£340 × 2 guests)</span><span>£680</span></div>
+        <!-- NOTE: Embarkation fee not mentioned anywhere before on the site -->
+        <div class="fee-line"><span>Embarkation & disembarkation levy (£85 × 2)</span><span>£170</span></div>
+        <div class="fee-line fee-total"><span>New subtotal</span><span>£16,050</span></div>
+        <p style="font-size:0.65rem;color:var(--light-grey);margin-top:0.75rem;">* Embarkation levy is a port authority charge applied to all Norwegian fjord departures from Ålesund. This is separate from the port fees and taxes line above.</p>
+      </div>
+
+      <div class="guest-section">
+        <h3>Guest 1 — Lead Passenger</h3>
+        <div class="form-grid">
+          <div class="form-group"><label>Title</label><select><option>Mr</option><option>Mrs</option><option>Ms</option><option>Dr</option><option>Prof</option></select></div>
+          <div class="form-group"><label>Nationality</label><select><option>British</option><option>Irish</option><option>American</option><option>Australian</option><option>Other</option></select></div>
+          <div class="form-group"><label>First Name</label><input type="text" placeholder="As shown on passport" /></div>
+          <div class="form-group"><label>Last Name</label><input type="text" placeholder="As shown on passport" /></div>
+          <div class="form-group"><label>Date of Birth</label><input type="date" /></div>
+          <div class="form-group"><label>Passport Number</label><input type="text" placeholder="Leave blank if not yet available" /></div>
+          <div class="form-group"><label>Passport Expiry</label><input type="date" /></div>
+          <div class="form-group"><label>Passport Issuing Country</label><select><option>United Kingdom</option><option>Ireland</option><option>USA</option><option>Australia</option><option>Other</option></select></div>
+          <div class="form-group full"><label>Email Address</label><input type="email" placeholder="All booking correspondence sent here" /></div>
+          <div class="form-group"><label>Mobile Number</label><input type="tel" placeholder="+44..." /></div>
+          <div class="form-group"><label>Emergency Contact Name</label><input type="text" /></div>
+          <div class="form-group full"><label>Dietary Requirements</label><input type="text" placeholder="Vegetarian, vegan, gluten-free, allergies, etc." /></div>
+          <div class="form-group full"><label>Medical Conditions or Mobility Considerations</label><input type="text" placeholder="Optional — helps us prepare appropriately" /></div>
+        </div>
+      </div>
+
+      <div class="guest-section">
+        <h3>Guest 2</h3>
+        <div class="form-grid">
+          <div class="form-group"><label>Title</label><select><option>Mr</option><option>Mrs</option><option>Ms</option><option>Dr</option></select></div>
+          <div class="form-group"><label>Nationality</label><select><option>British</option><option>Irish</option><option>American</option><option>Australian</option><option>Other</option></select></div>
+          <div class="form-group"><label>First Name</label><input type="text" placeholder="As shown on passport" /></div>
+          <div class="form-group"><label>Last Name</label><input type="text" placeholder="As shown on passport" /></div>
+          <div class="form-group"><label>Date of Birth</label><input type="date" /></div>
+          <div class="form-group"><label>Passport Number</label><input type="text" placeholder="Leave blank if not yet available" /></div>
+          <div class="form-group full"><label>Dietary Requirements</label><input type="text" placeholder="Optional" /></div>
+        </div>
+      </div>
+
+      <div class="price-alert" style="margin:1.5rem 0">ℹ Your booking will be held for 24 hours while you complete this process. No payment is taken until step 5.</div>
+
+      <a href="../extras/index.html" class="btn-primary" style="font-size:0.75rem;padding:1rem 3rem;">Continue to Extras →</a>
+    </div>
+
+    <div>
+      <div class="booking-sidebar">
+        <h3>Running Total</h3>
+        <div class="booking-line"><span>FF-NOR-24A · Porthole</span><span>£15,200</span></div>
+        <div class="booking-line"><span>Port fees (×2)</span><span>£680</span></div>
+        <div class="booking-line"><span>Embarkation levy (×2)</span><span>£170</span></div>
+        <div class="booking-line total"><span>Subtotal</span><span>£16,050</span></div>
+        <p class="pre-ticked-warning">* Optional extras — insurance, gratuities, transfers — are added at the next step. These are pre-selected by default.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid" style="padding:3rem">
+      <div class="footer-brand"><a href="../../index.html" class="nav-logo" style="text-decoration:none;">Faraway<span style="color:var(--off-white);font-style:italic;"> &amp; Fine</span></a><p>Faraway & Fine™ is fictional. No real bookings are taken.</p></div>
+      <div class="footer-col"><h4>Help</h4><ul><li><a href="../../faq.html">FAQ</a></li></ul></div>
+      <div class="footer-col"><h4>Meta</h4><ul><li><a href="../../llms.txt">llms.txt</a></li></ul></div>
+    </div>
+    <div class="footer-bottom" style="padding:1.5rem 3rem"><p>© 2024 Faraway & Fine™. All content fictional.</p></div>
+  </footer>
+</body>
+</html>

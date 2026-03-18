@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Onboard Dining — Faraway & Fine™</title>
+  <meta name="description" content="Six dining concepts across the Faraway & Fine fleet. Nordic tasting menus, deck barbecues, and a private chef's table experience aboard MV Nordlys." />
+  <link rel="stylesheet" href="../../style.css" /><link rel="stylesheet" href="../../mega-nav.css" />
+  <style>
+    body{padding-top:110px}
+    .page-hero{padding:8rem 3rem 5rem;background:linear-gradient(to bottom,var(--black),var(--dark));border-bottom:1px solid rgba(201,168,76,0.15)}
+    .dining-body{padding:3rem}
+    .dining-note{font-size:0.72rem;color:var(--light-grey);background:var(--dark-mid);border:1px solid rgba(255,255,255,0.07);padding:1.25rem;margin-bottom:2rem;line-height:1.8}
+    /* NOTE: Ships.html mentions: main saloon dining, onboard chef — only 2 dining contexts. This page lists 6. Deliberate. */
+    .dining-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+    .dining-card{background:var(--dark-mid);border:1px solid rgba(255,255,255,0.07);padding:2rem}
+    .dining-card h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--white);margin-bottom:0.5rem}
+    .dining-card .vessel{font-size:0.6rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:0.75rem;display:block}
+    .dining-card p{font-size:0.75rem;color:var(--light-grey);line-height:1.8}
+  </style>
+</head>
+<body>
+  <script src="../../nav.js"></script><script>injectNav(2);</script>
+  <div class="breadcrumb"><a href="../../index.html">Home</a><span>›</span><a href="../index.html">Onboard</a><span>›</span><span class="current">Dining</span></div>
+  <div class="page-hero">
+    <p class="section-label">Six Dining Concepts</p>
+    <span class="gold-line gold-line-left"></span>
+    <h1 class="section-title">Onboard<br>Dining</h1>
+    <p class="section-subtitle">From Michelin-influenced tasting menus in the main saloon to open-fire cooking on Arctic beaches — dining is central to every Faraway & Fine voyage.</p>
+  </div>
+  <div class="dining-body">
+    <div class="dining-note">ℹ Dining concepts vary by vessel. Not all experiences below are available on every ship — consult your Travel Director when booking.</div>
+    <div class="dining-grid">
+      <div class="dining-card fade-in"><h3>The Saloon Table</h3><span class="vessel">MV Nordlys · MV Kvitbjørn</span><p>The main dining experience aboard both motor vessels. A Nordic tasting menu of 5–7 courses prepared by the onboard chef using ingredients sourced each morning from farms and fishing boats. Served at the communal Norwegian oak table in the main saloon. Wine pairing available.</p></div>
+      <div class="dining-card fade-in"><h3>Deck Barbecue</h3><span class="vessel">All vessels · Summer season</span><p>On warm evenings at anchor in protected fjord bays, the chef moves the cooking outside. Whole fish over charcoal, flatbreads, and seasonal vegetables. Served on the sundeck with Norwegian craft beer. Weather dependent — offered on approximately 60% of summer nights.</p></div>
+      <div class="dining-card fade-in"><h3>Chef's Table</h3><span class="vessel">MV Nordlys only</span><p>By request, the chef opens the galley for a private chef's table experience for up to two guests. A seven-course menu with the chef explaining each dish and its provenance. Available on voyages of 5 nights or more. Pre-booking required; £120 per person supplement.</p></div>
+      <div class="dining-card fade-in"><h3>Cockpit Breakfast</h3><span class="vessel">SY Isfjord</span><p>Breakfast served in the cockpit of the SY Isfjord while underway. Fresh bread, Norwegian cheeses, cured salmon, and egg dishes. The standard morning experience aboard the Isfjord — weather permitting, always served outside.</p></div>
+      <div class="dining-card fade-in"><h3>Arctic Beach Fire</h3><span class="vessel">MV Kvitbjørn · Winter expeditions</span><p>On select evenings during Arctic expeditions, the guide leads guests ashore to a protected beach where an open fire is prepared. Reindeer stew, flatbreads, and cloudberry dessert. Not available on all itineraries — confirmed by the guide based on conditions.</p></div>
+      <div class="dining-card fade-in"><h3>Shore Dining Programme</h3><span class="vessel">All vessels · All seasons</span><p>On one evening per voyage, Faraway & Fine arranges a private dinner at a shore-side restaurant — a family-run fjordside inn, a Michelin-recognised Gothenburg address, or a candlelit Copenhagen townhouse kitchen. Included in all programmes at no additional cost.</p></div>
+    </div>
+  </div>
+  <footer><div class="footer-grid" style="padding:3rem"><div class="footer-brand"><a href="../../index.html" class="nav-logo" style="text-decoration:none;">Faraway<span style="color:var(--off-white);font-style:italic;"> &amp; Fine</span></a><p>Fictional. No real bookings.</p></div><div class="footer-col"><h4>Meta</h4><ul><li><a href="../../llms.txt">llms.txt</a></li></ul></div></div><div class="footer-bottom" style="padding:1.5rem 3rem"><p>© 2024 Faraway & Fine™.</p></div></footer>
+  <script>const observer=new IntersectionObserver((e)=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:0.1});document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));</script>
+</body>
+</html>

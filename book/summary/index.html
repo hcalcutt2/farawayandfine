@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking Summary & Payment — Step 5 of 5 — Faraway & Fine™</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../mega-nav.css" />
+  <style>
+    body{padding-top:110px;background:var(--dark)}
+    .book-layout{display:grid;grid-template-columns:1fr 380px;gap:3rem;padding:3rem;max-width:1260px;margin:0 auto}
+    .book-main h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:var(--white);margin-bottom:0.5rem}
+    .book-main .sub{font-size:0.78rem;color:var(--light-grey);margin-bottom:2rem}
+    .summary-block{background:var(--dark-mid);border:1px solid rgba(255,255,255,0.07);padding:2rem;margin-bottom:1.5rem}
+    .summary-block h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--white);margin-bottom:1.25rem;padding-bottom:0.75rem;border-bottom:1px solid rgba(255,255,255,0.07)}
+    .summary-row{display:flex;justify-content:space-between;font-size:0.78rem;padding:0.5rem 0;border-bottom:1px solid rgba(255,255,255,0.04)}
+    .summary-row span:first-child{color:var(--light-grey)}
+    .summary-row span:last-child{color:var(--off-white)}
+    .summary-row.highlight span:last-child{color:var(--gold)}
+    .price-breakdown{background:var(--black);border:1px solid rgba(201,168,76,0.2);padding:2rem;margin:2rem 0}
+    .price-breakdown h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--white);margin-bottom:1.5rem}
+    .pb-row{display:flex;justify-content:space-between;font-size:0.8rem;padding:0.6rem 0;border-bottom:1px solid rgba(255,255,255,0.05)}
+    .pb-row span:first-child{color:var(--light-grey)}
+    .pb-row span:last-child{color:var(--off-white)}
+    .pb-row.total{border-top:1px solid rgba(201,168,76,0.3);border-bottom:none;margin-top:0.5rem;padding-top:1rem}
+    .pb-row.total span{color:var(--gold)!important;font-family:'Cormorant Garamond',serif;font-size:1.4rem}
+    .pb-note{font-size:0.65rem;color:rgba(200,80,80,0.8);margin-top:1rem;line-height:1.7}
+    .payment-form{background:var(--dark-mid);border:1px solid rgba(255,255,255,0.07);padding:2rem;margin:1.5rem 0}
+    .payment-form h3{font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--white);margin-bottom:1.5rem}
+    .form-group{display:flex;flex-direction:column;gap:0.4rem;margin-bottom:1rem}
+    .form-group label{font-size:0.62rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold)}
+    .form-group input{background:var(--mid);border:1px solid rgba(255,255,255,0.12);color:var(--off-white);font-family:'Montserrat',sans-serif;font-size:0.78rem;padding:0.75rem 1rem;outline:none}
+    .form-group input:focus{border-color:var(--gold)}
+    .card-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1rem}
+    .terms-check{display:flex;align-items:flex-start;gap:1rem;font-size:0.72rem;color:var(--light-grey);line-height:1.7;margin:1.5rem 0}
+    .terms-check input{margin-top:0.2rem;accent-color:var(--gold);flex-shrink:0}
+    .big-total{background:var(--gold);color:var(--black);padding:2rem;margin-bottom:1.5rem;text-align:center}
+    .big-total .amount{font-family:'Cormorant Garamond',serif;font-size:3rem;font-weight:300;display:block;line-height:1}
+    .big-total .label{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;margin-top:0.5rem;display:block;opacity:0.7}
+    .big-total .deposit{font-size:0.8rem;margin-top:0.75rem;display:block;opacity:0.8}
+    .advertised-note{background:rgba(200,80,80,0.08);border:1px solid rgba(200,80,80,0.2);padding:1.25rem;font-size:0.72rem;color:#E07070;line-height:1.8;margin-bottom:1.5rem}
+  </style>
+</head>
+<body>
+  <script src="../../nav.js"></script>
+  <script>injectNav(2);</script>
+
+  <div class="booking-progress" style="margin-top:0">
+    <div class="progress-step done"><div class="progress-num">✓</div><span class="progress-label">Select Cruise</span></div>
+    <div class="progress-step done"><div class="progress-num">✓</div><span class="progress-label">Choose Cabin</span></div>
+    <div class="progress-step done"><div class="progress-num">✓</div><span class="progress-label">Guest Details</span></div>
+    <div class="progress-step done"><div class="progress-num">✓</div><span class="progress-label">Extras</span></div>
+    <div class="progress-step active"><div class="progress-num">5</div><span class="progress-label">Summary & Pay</span></div>
+  </div>
+
+  <div class="book-layout">
+    <div class="book-main">
+      <h2>Booking Summary</h2>
+      <p class="sub">Please review your booking before payment. Your cabin is held for 2 hours.</p>
+
+      <!-- THE PRICE DISCREPANCY REVEAL -->
+      <div class="advertised-note">
+        ℹ The original advertised price for this cruise was <strong>£7,950 per person</strong> (Porthole cabin, based on 2 guests sharing, as shown on the Find a Cruise listing page). The total below reflects the actual cost including all mandatory fees and your selected optional extras.
+      </div>
+
+      <div class="summary-block">
+        <h3>Journey Details</h3>
+        <div class="summary-row"><span>Cruise code</span><span>FF-NOR-24A</span></div>
+        <div class="summary-row"><span>Journey</span><span>Geirangerfjord & Nærøyfjord</span></div>
+        <div class="summary-row"><span>Vessel</span><span>MV Nordlys</span></div>
+        <div class="summary-row"><span>Cabin grade</span><span>Porthole (Cabin 1 or 2)</span></div>
+        <div class="summary-row"><span>Departure</span><span>10 May 2025</span></div>
+        <div class="summary-row"><span>Return</span><span>17 May 2025</span></div>
+        <div class="summary-row"><span>Guests</span><span>2 adults</span></div>
+      </div>
+
+      <div class="summary-block">
+        <h3>Guests</h3>
+        <div class="summary-row"><span>Guest 1</span><span>— (not entered)</span></div>
+        <div class="summary-row"><span>Guest 2</span><span>— (not entered)</span></div>
+      </div>
+
+      <!-- FULL PRICE BREAKDOWN — total is £1,674 more than advertised "from" price per person -->
+      <div class="price-breakdown">
+        <h3>Complete Price Breakdown</h3>
+        <div class="pb-row"><span>Porthole cabin × 2 guests</span><span>£15,200</span></div>
+        <div class="pb-row"><span>Port fees & taxes (£340 × 2)</span><span>£680</span></div>
+        <div class="pb-row"><span>Embarkation & disembarkation levy (£85 × 2)</span><span>£170</span></div>
+        <div class="pb-row"><span>Travel insurance — Standard (£218 × 2)</span><span>£436</span></div>
+        <div class="pb-row"><span>Crew gratuities (£12/day × 7 nights × 2)</span><span>£168</span></div>
+        <div class="pb-row"><span>Airport transfers × 2 (return)</span><span>£220</span></div>
+        <div class="pb-row total"><span>Total</span><span>£16,874</span></div>
+        <!-- NOTE: Per person total is £8,437 vs advertised £7,950 — £487pp more than headline price -->
+        <p class="pb-note">⚠ The advertised "from" price for this cruise was £7,950 per person. The per-person total including all mandatory fees and selected optional extras is £8,437 — £487 per person more than the headline price. You may deselect optional extras (insurance, gratuities, transfers) to reduce this. <a href="../extras/index.html" style="color:#E07070">← Return to Extras to amend</a></p>
+      </div>
+
+      <div class="payment-form">
+        <h3>Payment</h3>
+        <div class="price-alert" style="margin-bottom:1.5rem">ℹ You are paying the 25% deposit today: <strong>£4,218.50</strong>. The balance of £12,655.50 is due by 8 February 2025 (90 days before departure).</div>
+        <div class="form-group"><label>Name on Card</label><input type="text" placeholder="As it appears on your card" /></div>
+        <div class="card-grid">
+          <div class="form-group"><label>Card Number</label><input type="text" placeholder="•••• •••• •••• ••••" maxlength="19" /></div>
+          <div class="form-group"><label>Expiry</label><input type="text" placeholder="MM/YY" maxlength="5" /></div>
+          <div class="form-group"><label>CVV</label><input type="text" placeholder="•••" maxlength="4" /></div>
+        </div>
+        <div class="terms-check">
+          <input type="checkbox" id="terms" />
+          <label for="terms">I confirm I have read and agree to the <a href="#" style="color:var(--gold)">Faraway & Fine Terms & Conditions</a>, <a href="#" style="color:var(--gold)">Booking Conditions</a>, and <a href="#" style="color:var(--gold)">Privacy Policy</a>. I understand that the 25% deposit is non-refundable and that the balance of £12,655.50 is due by 8 February 2025. I confirm that all guests meet the minimum age requirement of 14 years. I acknowledge that port fees, embarkation levies, and pre-selected optional extras are included in the total shown above.</label>
+        </div>
+        <button class="btn-primary" style="font-size:0.75rem;padding:1rem 3rem;border:none;cursor:pointer;width:100%;margin-top:0.5rem" onclick="submitBooking()">Pay Deposit — £4,218.50</button>
+        <p style="font-size:0.65rem;color:var(--light-grey);text-align:center;margin-top:1rem;line-height:1.6">This is a fictional test site. No payment will be taken. No booking will be made.</p>
+      </div>
+    </div>
+
+    <!-- STICKY SIDEBAR -->
+    <div>
+      <div class="big-total">
+        <span class="label">Total Trip Cost</span>
+        <span class="amount">£16,874</span>
+        <span class="label">2 guests · 7 nights · FF-NOR-24A</span>
+        <span class="deposit">Deposit due today: £4,218.50</span>
+      </div>
+
+      <div class="booking-sidebar">
+        <h3>Price vs Advertised</h3>
+        <div class="booking-line"><span>Advertised "from" price</span><span>£7,950pp</span></div>
+        <div class="booking-line"><span>Actual cabin price</span><span>£7,600pp</span></div>
+        <div class="booking-line"><span>+ Port fees</span><span>+£340pp</span></div>
+        <div class="booking-line"><span>+ Embarkation levy</span><span>+£85pp</span></div>
+        <div class="booking-line"><span>+ Insurance</span><span>+£218pp</span></div>
+        <div class="booking-line"><span>+ Gratuities</span><span>+£84pp</span></div>
+        <div class="booking-line"><span>+ Transfers</span><span>+£110pp</span></div>
+        <div class="booking-line total"><span>Actual per person</span><span>£8,437</span></div>
+        <p class="pre-ticked-warning" style="margin-top:0.75rem">You are paying £487 per person more than the headline advertised price.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid" style="padding:3rem">
+      <div class="footer-brand"><a href="../../index.html" class="nav-logo" style="text-decoration:none;">Faraway<span style="color:var(--off-white);font-style:italic;"> &amp; Fine</span></a><p>Faraway & Fine™ is fictional. No real bookings are taken. No payment will be processed.</p></div>
+      <div class="footer-col"><h4>Help</h4><ul><li><a href="../../faq.html">FAQ</a></li><li><a href="../../about.html">About</a></li></ul></div>
+      <div class="footer-col"><h4>Meta</h4><ul><li><a href="../../llms.txt">llms.txt</a></li></ul></div>
+    </div>
+    <div class="footer-bottom" style="padding:1.5rem 3rem"><p>© 2024 Faraway & Fine™. All content fictional.</p></div>
+  </footer>
+
+  <script>
+    function submitBooking() {
+      alert('This is a fictional test site — no booking or payment has been made.');
+    }
+  </script>
+</body>
+</html>

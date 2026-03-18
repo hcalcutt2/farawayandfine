@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Choose Your Cabin — Step 2 of 5 — Faraway & Fine™</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="../../style.css" />
+  <link rel="stylesheet" href="../../mega-nav.css" />
+  <style>
+    body{padding-top:110px;background:var(--dark)}
+    .book-layout{display:grid;grid-template-columns:1fr 340px;gap:3rem;padding:3rem;max-width:1200px;margin:0 auto}
+    .book-main h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:var(--white);margin-bottom:0.5rem}
+    .book-main .sub{font-size:0.78rem;color:var(--light-grey);margin-bottom:2rem}
+    .cabin-option{background:var(--dark-mid);border:1px solid rgba(255,255,255,0.07);padding:2rem;margin-bottom:1rem;cursor:pointer;transition:border-color 0.3s;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start}
+    .cabin-option:hover{border-color:rgba(201,168,76,0.4)}
+    .cabin-option.selected{border-color:var(--gold);background:rgba(201,168,76,0.04)}
+    .cabin-option h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--white);margin-bottom:0.4rem}
+    .cabin-option p{font-size:0.75rem;color:var(--light-grey);line-height:1.7;margin-bottom:0.5rem}
+    .cabin-option ul{list-style:none}
+    .cabin-option ul li{font-size:0.72rem;color:var(--light-grey);padding:0.2rem 0;display:flex;gap:0.5rem}
+    .cabin-option ul li::before{content:'·';color:var(--gold)}
+    .cabin-price-col{text-align:right}
+    .cabin-price{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--gold)}
+    .cabin-price small{display:block;font-size:0.62rem;color:var(--light-grey);font-family:'Montserrat',sans-serif}
+    .cabin-price .was{font-size:0.9rem;text-decoration:line-through;color:var(--light-grey);display:block;margin-bottom:0.2rem}
+    .guests-row{display:flex;gap:1rem;align-items:center;background:var(--dark-mid);border:1px solid rgba(255,255,255,0.08);padding:1.5rem 2rem;margin-bottom:2rem}
+    .guests-row label{font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold)}
+    .guests-select{background:var(--mid);border:1px solid rgba(255,255,255,0.12);color:var(--off-white);font-family:'Montserrat',sans-serif;font-size:0.75rem;padding:0.5rem 0.75rem;margin-left:auto}
+  </style>
+</head>
+<body>
+  <script src="../../nav.js"></script>
+  <script>injectNav(2);</script>
+
+  <div class="booking-progress" style="margin-top:0">
+    <div class="progress-step done"><div class="progress-num">✓</div><span class="progress-label">Select Cruise</span></div>
+    <div class="progress-step active"><div class="progress-num">2</div><span class="progress-label">Choose Cabin</span></div>
+    <div class="progress-step"><div class="progress-num">3</div><span class="progress-label">Guest Details</span></div>
+    <div class="progress-step"><div class="progress-num">4</div><span class="progress-label">Extras</span></div>
+    <div class="progress-step"><div class="progress-num">5</div><span class="progress-label">Summary & Pay</span></div>
+  </div>
+
+  <div class="book-layout">
+    <div class="book-main">
+      <h2>Choose Your Cabin Grade</h2>
+      <p class="sub">MV Nordlys · FF-NOR-24A · 7 nights · 10 May 2025 · 2 guests</p>
+
+      <div class="guests-row">
+        <label>Number of guests</label>
+        <select class="guests-select" onchange="updateGuests(this.value)">
+          <option value="2">2 adults</option>
+          <option value="1">1 adult (solo supplement applies)</option>
+          <option value="3">3 adults</option>
+          <option value="4">4 adults</option>
+        </select>
+      </div>
+
+      <!-- NOTE: Porthole price (£7,600) is LOWER than the "from" price shown on step 1 (£7,950) — deliberate confusion -->
+      <div class="cabin-option selected" onclick="selectCabin(this,'porthole',7600)">
+        <div>
+          <h3><span class="cabin-grade-badge badge-porthole" style="margin-right:0.5rem">Porthole</span>Cabin 1 or 2</h3>
+          <p>Lower deck, porthole window, 9m². Two single berths (can be arranged as a double). En-suite shower room.</p>
+          <ul>
+            <li>Porthole window with fjord views when moored</li>
+            <li>Storage wardrobe and under-bunk luggage space</li>
+            <li>En-suite: shower, WC, basin</li>
+            <li>Full access to main saloon, sundeck, and all common areas</li>
+          </ul>
+        </div>
+        <div class="cabin-price-col">
+          <div class="cabin-price">£7,600<small>per person</small></div>
+          <br>
+          <input type="radio" name="cabin" checked style="accent-color:var(--gold)"> Select
+        </div>
+      </div>
+
+      <!-- NOTE: Deck Window (£8,400) matches product.html "from" price but is higher than porthole and listing page "from" -->
+      <div class="cabin-option" onclick="selectCabin(this,'window',8400)">
+        <div>
+          <h3><span class="cabin-grade-badge badge-balcony" style="margin-right:0.5rem">Deck Window</span>Cabin 3 or 4</h3>
+          <p>Mid-deck, deck-level window, 12m². Double bed or twin configuration. En-suite bathroom. Slightly more headroom than the Porthole grade.</p>
+          <ul>
+            <li>Deck-level window — more natural light than Porthole grade</li>
+            <li>Double bed configuration available on request</li>
+            <li>En-suite: shower, WC, basin, heated towel rail</li>
+            <li>Slightly larger floor area (12m² vs 9m²)</li>
+          </ul>
+        </div>
+        <div class="cabin-price-col">
+          <div class="cabin-price">£8,400<small>per person</small></div>
+          <br>
+          <input type="radio" name="cabin" style="accent-color:var(--gold)"> Select
+        </div>
+      </div>
+
+      <!-- NOTE: Owner's Cabin (£13,800) — very different from "suite" price implied elsewhere -->
+      <div class="cabin-option" onclick="selectCabin(this,'owners',13800)">
+        <div>
+          <h3><span class="cabin-grade-badge badge-suite" style="margin-right:0.5rem">Owner's Cabin</span>Cabin 5 (Bow)</h3>
+          <p>Forward bow cabin, panoramic windows on three sides, 18m². The finest cabin aboard MV Nordlys. King-size bed, private seating area, and a claw-foot bath in addition to the shower.</p>
+          <ul>
+            <li>Panoramic bow windows — forward views underway</li>
+            <li>King-size bed (fixed configuration)</li>
+            <li>Private seating area with Norwegian oak joinery</li>
+            <li>Full bathroom with claw-foot bath and separate shower</li>
+            <li>Complimentary bottle of Norwegian aquavit on arrival</li>
+            <li>Priority booking for all shore excursions</li>
+          </ul>
+        </div>
+        <div class="cabin-price-col">
+          <div class="cabin-price">£13,800<small>per person</small></div>
+          <br>
+          <input type="radio" name="cabin" style="accent-color:var(--gold)"> Select
+        </div>
+      </div>
+
+      <div class="price-alert warning" style="margin:2rem 0">
+        ⚠ Prices above are per person and exclude port fees & taxes of £340 per person, added at the next step.
+      </div>
+
+      <a href="../guests/index.html" class="btn-primary" style="font-size:0.75rem;padding:1rem 3rem;">Continue to Guest Details →</a>
+    </div>
+
+    <div>
+      <div class="booking-sidebar">
+        <h3>Your Booking</h3>
+        <div class="booking-line"><span>Cruise</span><span>FF-NOR-24A</span></div>
+        <div class="booking-line"><span>Departure</span><span>10 May 2025</span></div>
+        <div class="booking-line"><span>Guests</span><span id="sb-guests">2 adults</span></div>
+        <div class="booking-line"><span>Cabin</span><span id="sb-cabin">Porthole</span></div>
+        <div class="booking-line"><span>Cabin cost</span><span id="sb-cabin-price">£7,600pp</span></div>
+        <div class="booking-line"><span>Port fees</span><span>TBC at step 3</span></div>
+        <div class="booking-line total"><span>Subtotal</span><span id="sb-total">£15,200</span></div>
+        <p class="pre-ticked-warning">* Final price will increase at step 4 — port fees, gratuities and optional extras are added there.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid" style="padding:3rem">
+      <div class="footer-brand"><a href="../../index.html" class="nav-logo" style="text-decoration:none;">Faraway<span style="color:var(--off-white);font-style:italic;"> &amp; Fine</span></a><p>Faraway & Fine™ is fictional. No real bookings are taken.</p></div>
+      <div class="footer-col"><h4>Help</h4><ul><li><a href="../../faq.html">FAQ</a></li></ul></div>
+      <div class="footer-col"><h4>Meta</h4><ul><li><a href="../../llms.txt">llms.txt</a></li></ul></div>
+    </div>
+    <div class="footer-bottom" style="padding:1.5rem 3rem"><p>© 2024 Faraway & Fine™. All content fictional.</p></div>
+  </footer>
+
+  <script>
+    function selectCabin(card, grade, price) {
+      document.querySelectorAll('.cabin-option').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      card.querySelector('input').checked = true;
+      document.getElementById('sb-cabin').textContent = grade.charAt(0).toUpperCase() + grade.slice(1);
+      document.getElementById('sb-cabin-price').textContent = '£' + price.toLocaleString() + 'pp';
+      document.getElementById('sb-total').textContent = '£' + (price * 2).toLocaleString();
+      sessionStorage.setItem('ff_cabin', grade);
+      sessionStorage.setItem('ff_cabin_price', price);
+    }
+    function updateGuests(n) {
+      document.getElementById('sb-guests').textContent = n + ' adult' + (n > 1 ? 's' : '');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Your Cruise — Step 1 of 5 — Faraway & Fine™</title>
+  <meta name="robots" content="noindex" />
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../mega-nav.css" />
+  <style>
+    body { padding-top: 110px; background: var(--dark); }
+    .book-layout { display: grid; grid-template-columns: 1fr 340px; gap: 3rem; padding: 3rem; max-width: 1200px; margin: 0 auto; }
+    .book-main h2 { font-family:'Cormorant Garamond',serif; font-size:1.8rem; font-weight:300; color:var(--white); margin-bottom:1.5rem; }
+    .cruise-select-card { background:var(--dark-mid); border:1px solid rgba(255,255,255,0.07); padding:2rem; margin-bottom:1rem; cursor:pointer; transition:border-color 0.3s; display:grid; grid-template-columns:1fr auto; gap:2rem; align-items:center; }
+    .cruise-select-card:hover { border-color:rgba(201,168,76,0.4); }
+    .cruise-select-card.selected { border-color:var(--gold); background:rgba(201,168,76,0.05); }
+    .cruise-select-card h3 { font-family:'Cormorant Garamond',serif; font-size:1.3rem; font-weight:400; color:var(--white); margin-bottom:0.4rem; }
+    .cruise-select-card p { font-size:0.75rem; color:var(--light-grey); line-height:1.7; }
+    .cruise-select-price { font-family:'Cormorant Garamond',serif; font-size:1.8rem; color:var(--gold); text-align:right; white-space:nowrap; }
+    .cruise-select-price small { display:block; font-size:0.62rem; color:var(--light-grey); font-family:'Montserrat',sans-serif; }
+    .depart-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:0.75rem; margin:1.5rem 0; }
+    .depart-btn { background:var(--dark-mid); border:1px solid rgba(255,255,255,0.1); color:var(--light-grey); font-family:'Montserrat',sans-serif; font-size:0.7rem; padding:0.75rem; cursor:pointer; text-align:center; transition:all 0.2s; }
+    .depart-btn:hover { border-color:var(--gold); color:var(--gold); }
+    .depart-btn.selected { border-color:var(--gold); color:var(--gold); background:rgba(201,168,76,0.08); }
+    .depart-btn .date { font-size:0.85rem; font-weight:500; display:block; margin-bottom:0.2rem; }
+    .depart-btn .avail { font-size:0.6rem; }
+    .avail-good { color:#70C080; }
+    .avail-limited { color:#E07070; }
+  </style>
+</head>
+<body>
+  <script src="../nav.js"></script>
+  <script>injectNav(1);</script>
+
+  <div class="booking-progress" style="margin-top:0">
+    <div class="progress-step active"><div class="progress-num">1</div><span class="progress-label">Select Cruise</span></div>
+    <div class="progress-step"><div class="progress-num">2</div><span class="progress-label">Choose Cabin</span></div>
+    <div class="progress-step"><div class="progress-num">3</div><span class="progress-label">Guest Details</span></div>
+    <div class="progress-step"><div class="progress-num">4</div><span class="progress-label">Extras</span></div>
+    <div class="progress-step"><div class="progress-num">5</div><span class="progress-label">Summary & Pay</span></div>
+  </div>
+
+  <div class="book-layout">
+    <div class="book-main">
+      <h2>Select Your Cruise</h2>
+
+      <div class="cruise-select-card selected" onclick="selectCruise(this, 'FF-NOR-24A', 7950)">
+        <div>
+          <h3>Geirangerfjord & Nærøyfjord — FF-NOR-24A</h3>
+          <p>7 nights · MV Nordlys · Western Norway · May–September 2025</p>
+        </div>
+        <!-- NOTE: Price shown here (£7,950) again differs from cruise page (£7,600 porthole) and product page (£8,400) -->
+        <div class="cruise-select-price">£7,950<small>per person</small></div>
+      </div>
+
+      <div class="cruise-select-card" onclick="selectCruise(this, 'FF-NOR-24B', 5400)">
+        <div>
+          <h3>Lofoten Islands Winter — FF-NOR-24B</h3>
+          <p>8 nights · MV Kvitbjørn · Northern Norway · January 2025</p>
+        </div>
+        <div class="cruise-select-price">£5,400<small>per person</small></div>
+      </div>
+
+      <div class="cruise-select-card" onclick="selectCruise(this, 'FF-NOR-25A', 4950)">
+        <div>
+          <h3>Tromsø Aurora Wilderness — FF-NOR-25A</h3>
+          <p>6 nights · MV Kvitbjørn · Northern Norway · Oct–Mar</p>
+        </div>
+        <div class="cruise-select-price">£4,950<small>per person</small></div>
+      </div>
+
+      <div class="cruise-select-card" onclick="selectCruise(this, 'FF-DEN-24A', 3650)">
+        <div>
+          <h3>Copenhagen Cultural Immersion — FF-DEN-24A</h3>
+          <p>5 nights · Land Programme · Denmark · Year-round</p>
+        </div>
+        <div class="cruise-select-price">£3,650<small>per person</small></div>
+      </div>
+
+      <div class="cruise-select-card" onclick="selectCruise(this, 'FF-SWE-24A', 4600)">
+        <div>
+          <h3>Stockholm & the Archipelago — FF-SWE-24A</h3>
+          <p>7 nights · SY Isfjord · Sweden · May–September</p>
+        </div>
+        <div class="cruise-select-price">£4,600<small>per person</small></div>
+      </div>
+
+      <br>
+      <h2>Select Departure Date</h2>
+      <div class="depart-grid" id="depart-grid">
+        <button class="depart-btn selected" onclick="selectDate(this,'2025-05-10')"><span class="date">10 May 2025</span><span class="avail avail-good">✓ Available</span></button>
+        <button class="depart-btn" onclick="selectDate(this,'2025-05-17')"><span class="date">17 May 2025</span><span class="avail avail-good">✓ Available</span></button>
+        <button class="depart-btn" onclick="selectDate(this,'2025-05-24')"><span class="date">24 May 2025</span><span class="avail avail-good">✓ Available</span></button>
+        <button class="depart-btn" onclick="selectDate(this,'2025-06-07')"><span class="date">7 Jun 2025</span><span class="avail avail-limited">⚠ 2 cabins left</span></button>
+        <button class="depart-btn" onclick="selectDate(this,'2025-06-14')"><span class="date">14 Jun 2025</span><span class="avail avail-good">✓ Available</span></button>
+        <button class="depart-btn" onclick="selectDate(this,'2025-07-05')"><span class="date">5 Jul 2025</span><span class="avail avail-limited">⚠ 1 cabin left</span></button>
+        <button class="depart-btn" onclick="selectDate(this,'2025-07-12')"><span class="date">12 Jul 2025</span><span class="avail avail-good">✓ Available</span></button>
+        <button class="depart-btn" onclick="selectDate(this,'2025-08-09')"><span class="date">9 Aug 2025</span><span class="avail avail-good">✓ Available</span></button>
+        <button class="depart-btn" onclick="selectDate(this,'2025-09-06')"><span class="date">6 Sep 2025</span><span class="avail avail-good">✓ Available</span></button>
+      </div>
+
+      <br>
+      <div class="price-alert">ℹ Prices shown are per person based on 2 guests sharing. Early booking discount of up to £800pp applies on May and June departures.</div>
+      <br>
+      <a href="cabin/index.html" class="btn-primary" style="font-size:0.75rem;padding:1rem 3rem;" onclick="saveSelection()">Continue to Cabin Selection →</a>
+    </div>
+
+    <div>
+      <div class="booking-sidebar">
+        <h3>Your Selection</h3>
+        <div class="booking-line"><span>Cruise</span><span id="sb-cruise">FF-NOR-24A</span></div>
+        <div class="booking-line"><span>Departure</span><span id="sb-date">10 May 2025</span></div>
+        <div class="booking-line"><span>Duration</span><span id="sb-nights">7 nights</span></div>
+        <div class="booking-line"><span>Guests</span><span>2 adults</span></div>
+        <div class="booking-line"><span>Cabin from</span><span id="sb-price" style="color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:1.1rem;">£7,950pp</span></div>
+        <div class="booking-line total"><span>Est. total</span><span id="sb-total">£15,900</span></div>
+        <p class="pre-ticked-warning">* Excludes port fees (£340pp), insurance, gratuities and transfers added at step 4.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid" style="padding:3rem">
+      <div class="footer-brand"><a href="../index.html" class="nav-logo" style="text-decoration:none;">Faraway<span style="color:var(--off-white);font-style:italic;"> &amp; Fine</span></a><p>Faraway & Fine™ is fictional. No real bookings are taken.</p></div>
+      <div class="footer-col"><h4>Help</h4><ul><li><a href="../faq.html">FAQ</a></li><li><a href="../about.html">About Us</a></li></ul></div>
+      <div class="footer-col"><h4>Meta</h4><ul><li><a href="../llms.txt">llms.txt</a></li></ul></div>
+    </div>
+    <div class="footer-bottom" style="padding:1.5rem 3rem"><p>© 2024 Faraway & Fine™. All content fictional.</p></div>
+  </footer>
+
+  <script>
+    let selectedCruise = 'FF-NOR-24A';
+    let selectedPrice = 7950;
+    let selectedDate = '10 May 2025';
+
+    function selectCruise(card, code, price) {
+      document.querySelectorAll('.cruise-select-card').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      selectedCruise = code;
+      selectedPrice = price;
+      document.getElementById('sb-cruise').textContent = code;
+      document.getElementById('sb-price').textContent = '£' + price.toLocaleString() + 'pp';
+      document.getElementById('sb-total').textContent = '£' + (price * 2).toLocaleString();
+    }
+
+    function selectDate(btn, date) {
+      document.querySelectorAll('.depart-btn').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      selectedDate = btn.querySelector('.date').textContent;
+      document.getElementById('sb-date').textContent = selectedDate;
+    }
+
+    function saveSelection() {
+      sessionStorage.setItem('ff_cruise', selectedCruise);
+      sessionStorage.setItem('ff_price', selectedPrice);
+      sessionStorage.setItem('ff_date', selectedDate);
+    }
+  </script>
+</body>
+</html>

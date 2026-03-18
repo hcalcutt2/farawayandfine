@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Destinations — Faraway & Fine™</title>
+  <meta name="description" content="All Faraway & Fine™ Scandinavian destinations — Norway, Sweden, Denmark. Fjords, archipelagos, Nordic cities, and Arctic wilderness." />
+  <link rel="stylesheet" href="../style.css" /><link rel="stylesheet" href="../mega-nav.css" />
+  <style>
+    body{padding-top:110px}
+    .page-hero{padding:8rem 3rem 5rem;background:linear-gradient(to bottom,var(--black),var(--dark));border-bottom:1px solid rgba(201,168,76,0.15)}
+    .dest-body{padding:3rem}
+    .country-section{margin-bottom:4rem}
+    .country-section h2{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:var(--white);margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid rgba(201,168,76,0.2)}
+    .dest-mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+    .dest-mini{position:relative;overflow:hidden;cursor:pointer;text-decoration:none;display:block}
+    .dest-mini-img{width:100%;height:200px;object-fit:cover;display:block;transition:transform 0.6s}
+    .dest-mini:hover .dest-mini-img{transform:scale(1.05)}
+    .dest-mini-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.8) 0%,transparent 50%);display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem}
+    .dest-mini-region{font-size:0.58rem;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold);margin-bottom:0.3rem}
+    .dest-mini h3{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--white)}
+    .dest-mini-price{font-size:0.7rem;color:rgba(245,240,232,0.6);margin-top:0.3rem}
+  </style>
+</head>
+<body>
+  <script src="../nav.js"></script><script>injectNav(1);</script>
+  <div class="breadcrumb"><a href="../index.html">Home</a><span>›</span><span class="current">Destinations</span></div>
+  <div class="page-hero">
+    <p class="section-label">38 Destinations</p>
+    <span class="gold-line gold-line-left"></span>
+    <h1 class="section-title">Our Destinations</h1>
+    <p class="section-subtitle">Norway, Sweden, Denmark, and the wider Nordic world — 38 personally vetted destinations across five countries.</p>
+  </div>
+  <div class="dest-body">
+    <div class="country-section" id="norway">
+      <h2>Norway</h2>
+      <div class="dest-mini-grid">
+        <a href="geirangerfjord.html" class="dest-mini fade-in"><img class="dest-mini-img" src="https://images.unsplash.com/photo-1513519245088-0e12902e35ca?w=600&q=70" alt="Geirangerfjord" loading="lazy"/><div class="dest-mini-overlay"><span class="dest-mini-region">Western Norway</span><h3>Geirangerfjord</h3><p class="dest-mini-price">From £8,400pp</p></div></a>
+        <a href="tromso.html" class="dest-mini fade-in"><img class="dest-mini-img" src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=600&q=70" alt="Tromsø" loading="lazy"/><div class="dest-mini-overlay"><span class="dest-mini-region">Northern Norway</span><h3>Tromsø</h3><p class="dest-mini-price">From £5,200pp</p></div></a>
+        <a href="lofoten.html" class="dest-mini fade-in"><img class="dest-mini-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=70" alt="Lofoten" loading="lazy"/><div class="dest-mini-overlay"><span class="dest-mini-region">Northern Norway</span><h3>Lofoten Islands</h3><p class="dest-mini-price">From £5,600pp</p></div></a>
+      </div>
+    </div>
+    <div class="country-section" id="sweden">
+      <h2>Sweden</h2>
+      <div class="dest-mini-grid">
+        <a href="stockholm.html" class="dest-mini fade-in"><img class="dest-mini-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=70" alt="Stockholm" loading="lazy"/><div class="dest-mini-overlay"><span class="dest-mini-region">Sweden</span><h3>Stockholm Archipelago</h3><p class="dest-mini-price">From £4,800pp</p></div></a>
+        <a href="gothenburg.html" class="dest-mini fade-in"><img class="dest-mini-img" src="https://images.unsplash.com/photo-1509356843151-3e7d96241e11?w=600&q=70" alt="Gothenburg" loading="lazy"/><div class="dest-mini-overlay"><span class="dest-mini-region">Sweden</span><h3>Gothenburg & Bohuslän</h3><p class="dest-mini-price">From £4,000pp</p></div></a>
+      </div>
+    </div>
+    <div class="country-section" id="denmark">
+      <h2>Denmark</h2>
+      <div class="dest-mini-grid">
+        <a href="copenhagen.html" class="dest-mini fade-in"><img class="dest-mini-img" src="https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=600&q=70" alt="Copenhagen" loading="lazy"/><div class="dest-mini-overlay"><span class="dest-mini-region">Denmark</span><h3>Copenhagen & North Zealand</h3><p class="dest-mini-price">From £3,900pp</p></div></a>
+      </div>
+    </div>
+  </div>
+  <footer><div class="footer-grid" style="padding:3rem"><div class="footer-brand"><a href="../index.html" class="nav-logo" style="text-decoration:none;">Faraway<span style="color:var(--off-white);font-style:italic;"> &amp; Fine</span></a><p>Fictional. No real bookings.</p></div><div class="footer-col"><h4>Meta</h4><ul><li><a href="../llms.txt">llms.txt</a></li></ul></div></div><div class="footer-bottom" style="padding:1.5rem 3rem"><p>© 2024 Faraway & Fine™.</p></div></footer>
+  <script>const observer=new IntersectionObserver((e)=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:0.1});document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));</script>
+</body>
+</html>

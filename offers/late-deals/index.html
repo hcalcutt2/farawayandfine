@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Late Deals — Faraway & Fine™</title>
+  <meta name="description" content="Last-minute Faraway & Fine Scandinavian travel deals. Departures within 6 weeks at reduced prices. Aurora cabins, fjord yachts, and Copenhagen immersions." />
+  <link rel="stylesheet" href="../../style.css" /><link rel="stylesheet" href="../../mega-nav.css" />
+  <style>
+    body{padding-top:110px}
+    .page-hero{padding:8rem 3rem 5rem;background:linear-gradient(to bottom,var(--black),var(--dark));border-bottom:1px solid rgba(201,168,76,0.15)}
+    .late-body{padding:3rem}
+    .late-grid{display:flex;flex-direction:column;gap:1rem;margin-top:2rem}
+    .late-card{background:var(--dark-mid);border:1px solid rgba(255,255,255,0.07);padding:2rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;transition:border-color 0.3s}
+    .late-card:hover{border-color:rgba(201,168,76,0.4)}
+    .late-card h3{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--white);margin-bottom:0.4rem}
+    .late-card p{font-size:0.75rem;color:var(--light-grey);line-height:1.7}
+    .late-price{text-align:right}
+    .late-was{font-size:0.9rem;text-decoration:line-through;color:var(--light-grey);display:block}
+    .late-now{font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--gold)}
+    .late-pp{font-size:0.62rem;color:var(--light-grey);display:block}
+    .late-saving{background:rgba(200,80,80,0.15);color:#E07070;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;padding:0.2rem 0.6rem;display:inline-block;margin-bottom:0.5rem}
+    .countdown-bar{display:flex;gap:0.75rem;margin-top:0.75rem}
+    .cu{background:var(--black);border:1px solid rgba(201,168,76,0.2);padding:0.5rem 0.75rem;text-align:center;min-width:52px}
+    .cn{font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--gold);display:block;line-height:1}
+    .cl{font-size:0.5rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--light-grey)}
+  </style>
+</head>
+<body>
+  <script src="../../nav.js"></script><script>injectNav(2);</script>
+  <div class="breadcrumb"><a href="../../index.html">Home</a><span>›</span><a href="../index.html">Offers</a><span>›</span><span class="current">Late Deals</span></div>
+  <div class="page-hero">
+    <p class="section-label">🔴 Late Availability</p>
+    <span class="gold-line gold-line-left"></span>
+    <h1 class="section-title">Late Deals</h1>
+    <p class="section-subtitle">Last-minute availability at significantly reduced prices. All departures within the next 6 weeks. Prices and availability change daily.</p>
+  </div>
+  <div class="late-body">
+    <div class="price-alert warning">⚠ These prices are time-limited and change daily. The prices shown here may differ from other pages on this site — late deal prices reflect last-minute availability discounts and are lower than standard rates.</div>
+    <div class="late-grid">
+
+      <!-- NOTE: Tromsø late deal £3,800 — significantly lower than product (£5,200), destination (£4,950), listing (£4,950), deals.html (£4,400 sale) -->
+      <div class="late-card fade-in">
+        <div>
+          <span class="late-saving">Save £1,400pp vs standard price</span>
+          <h3>Tromsø Aurora Wilderness — FF-NOR-25A</h3>
+          <p>6 nights · MV Kvitbjørn · Departs <strong>14 January 2025</strong> · 2 cabin spaces remaining</p>
+          <div class="countdown-bar" id="countdown-1"></div>
+        </div>
+        <div class="late-price">
+          <span class="late-was">£5,200</span>
+          <span class="late-now">£3,800</span>
+          <span class="late-pp">per person</span>
+          <br><br>
+          <a href="../../book/index.html?cruise=FF-NOR-25A&offer=late" class="btn-primary" style="font-size:0.62rem;padding:0.6rem 1.2rem;">Book Now</a>
+        </div>
+      </div>
+
+      <!-- NOTE: Lofoten late deal £4,200 — lower than deals.html (£5,600), listing (£5,400) -->
+      <div class="late-card fade-in">
+        <div>
+          <span class="late-saving">Save £1,400pp — final departure</span>
+          <h3>Lofoten Islands Winter — FF-NOR-24B</h3>
+          <p>8 nights · MV Kvitbjørn · Departs <strong>8 January 2025</strong> · Last departure of season · 1 cabin remaining</p>
+          <div class="countdown-bar" id="countdown-2"></div>
+        </div>
+        <div class="late-price">
+          <span class="late-was">£5,600</span>
+          <span class="late-now">£4,200</span>
+          <span class="late-pp">per person</span>
+          <br><br>
+          <a href="../../book/index.html?cruise=FF-NOR-24B&offer=late" class="btn-primary" style="font-size:0.62rem;padding:0.6rem 1.2rem;">Book Now</a>
+        </div>
+      </div>
+
+      <!-- NOTE: Copenhagen late deal £2,600 — lower than all other prices (product: £3,900, destination: £4,200, deals: £3,200 sale, listing: £3,650) -->
+      <div class="late-card fade-in">
+        <div>
+          <span class="late-saving">Save £1,300pp — flexible dates</span>
+          <h3>Copenhagen Cultural Immersion — FF-DEN-24A</h3>
+          <p>5 nights · Land Programme · <strong>Flexible departure, January–February 2025</strong> · Immediate availability</p>
+        </div>
+        <div class="late-price">
+          <span class="late-was">£3,900</span>
+          <span class="late-now">£2,600</span>
+          <span class="late-pp">per person</span>
+          <br><br>
+          <a href="../../book/index.html?cruise=FF-DEN-24A&offer=late" class="btn-primary" style="font-size:0.62rem;padding:0.6rem 1.2rem;">Book Now</a>
+        </div>
+      </div>
+
+    </div>
+    <br>
+    <p style="font-size:0.72rem;color:var(--light-grey);line-height:1.8">* Late deal prices exclude port fees & taxes (£340pp) and optional extras. Standard terms apply. Deposits are non-refundable. Late deals cannot be combined with early booking discounts or any other promotional code.</p>
+  </div>
+  <footer><div class="footer-grid" style="padding:3rem"><div class="footer-brand"><a href="../../index.html" class="nav-logo" style="text-decoration:none;">Faraway<span style="color:var(--off-white);font-style:italic;"> &amp; Fine</span></a><p>Fictional. No real bookings.</p></div><div class="footer-col"><h4>Offers</h4><ul><li><a href="index.html">Late Deals</a></li><li><a href="../early-booking/index.html">Early Booking</a></li><li><a href="../all-inclusive/index.html">All-Inclusive</a></li></ul></div><div class="footer-col"><h4>Meta</h4><ul><li><a href="../../llms.txt">llms.txt</a></li></ul></div></div><div class="footer-bottom" style="padding:1.5rem 3rem"><p>© 2024 Faraway & Fine™. All content fictional.</p></div></footer>
+  <script>
+    const observer=new IntersectionObserver((e)=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:0.1});document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+    function buildCountdown(id, hours) {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const h = Math.floor(hours), m = Math.floor((hours%1)*60);
+      el.innerHTML = `<div class="cu"><span class="cn">${h}</span><span class="cl">Hours</span></div><div class="cu"><span class="cn">${m}</span><span class="cl">Mins</span></div><div class="cu"><span class="cn">--</span><span class="cl">Secs</span></div>`;
+    }
+    buildCountdown('countdown-1', 11.5);
+    buildCountdown('countdown-2', 4.2);
+  </script>
+</body>
+</html>
