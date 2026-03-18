@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Fleet — Faraway & Fine™</title>
+  <meta name="description" content="The Faraway & Fine™ fleet consists of three privately chartered expedition vessels: MV Nordlys, SY Isfjord, and MV Kvitbjørn. Each vessel is purpose-built for Scandinavian waters." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero { padding: 14rem 4rem 6rem; background: linear-gradient(to bottom, var(--black), var(--dark)); border-bottom: 1px solid rgba(201,168,76,0.15); }
+    .ship-grid { display: grid; grid-template-columns: 1fr; gap: 0; padding: 0 4rem 6rem; }
+    .ship-feature {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid rgba(201,168,76,0.2);
+      border-top: none;
+      overflow: hidden;
+      min-height: 500px;
+    }
+    .ship-feature:first-child { border-top: 1px solid rgba(201,168,76,0.2); margin-top: 4rem; }
+    .ship-feature.reverse { direction: rtl; }
+    .ship-feature.reverse > * { direction: ltr; }
+    .ship-img { width: 100%; height: 100%; min-height: 500px; object-fit: cover; display: block; }
+    .ship-content { background: var(--dark-mid); padding: 4rem; display: flex; flex-direction: column; justify-content: center; }
+    .ship-tag {
+      display: inline-block;
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(201,168,76,0.4);
+      padding: 0.35rem 0.9rem;
+      margin-bottom: 1.5rem;
+      width: fit-content;
+    }
+    .ship-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2.4rem; font-weight: 300; color: var(--white); line-height: 1.2; margin-bottom: 0.5rem; }
+    .ship-built { font-size: 0.7rem; color: var(--light-grey); letter-spacing: 0.1em; margin-bottom: 1.5rem; }
+    .ship-content p { font-size: 0.82rem; color: var(--light-grey); line-height: 1.9; margin-bottom: 1.5rem; }
+    .ship-specs {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      padding: 1.5rem 0;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      margin-bottom: 2rem;
+    }
+    .spec label { display: block; font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }
+    .spec span { font-size: 0.82rem; color: var(--off-white); }
+    .ship-itineraries h4 { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+    .ship-itineraries ul { list-style: none; }
+    .ship-itineraries ul li { font-size: 0.78rem; color: var(--light-grey); padding: 0.4rem 0; border-bottom: 1px solid rgba(255,255,255,0.05); display: flex; justify-content: space-between; }
+    .ship-itineraries ul li span { color: var(--gold); }
+    /* NOTE: prices here deliberately differ slightly from other pages */
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="../index.html" class="nav-logo">Faraway<span> &amp; Fine</span></a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../deals.html">Deals</a></li>
+      <li><a href="../product.html">Experiences</a></li>
+      <li><a href="ships.html" class="active">Fleet</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="../index.html#contact" class="nav-cta">Enquire</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <p class="section-label">The Fleet</p>
+    <span class="gold-line gold-line-left"></span>
+    <h1 class="section-title">Our Three<br>Vessels</h1>
+    <p class="section-subtitle">Faraway & Fine™ operates three privately chartered expedition vessels, each purpose-built or restored for Scandinavian waters. No vessel carries more than eight guests.</p>
+  </div>
+
+  <div class="ship-grid">
+
+    <!-- MV NORDLYS -->
+    <div class="ship-feature fade-in">
+      <img class="ship-img" src="https://images.unsplash.com/photo-1505118380757-91f5f5632de0?w=900&q=80" alt="MV Nordlys expedition yacht in Norwegian fjord at dawn" loading="lazy"/>
+      <div class="ship-content">
+        <span class="ship-tag">Fjord Expeditions · Norway</span>
+        <h2>MV Nordlys</h2>
+        <p class="ship-built">Built Bergen, 1987 · Restored 2022 · 38 metres</p>
+        <p>The MV Nordlys is the flagship of the Faraway & Fine fleet. Originally a supply vessel for the Norwegian oil industry, she was purchased by Faraway & Fine in 2021 and comprehensively restored at a shipyard in Ålesund over 14 months. Her hull is ice-rated to Class 1C, making her suitable for operations in the fjords year-round and in southern Norwegian waters in winter.</p>
+        <p>She accommodates up to six guests across three cabins, each with an en-suite bathroom and panoramic porthole. The main saloon has been entirely redesigned with reclaimed Norwegian oak and a wood-burning fireplace. The sundeck is heated and covers the full beam of the vessel.</p>
+        <div class="ship-specs">
+          <div class="spec"><label>Length</label><span>38m</span></div>
+          <div class="spec"><label>Guests</label><span>Up to 6</span></div>
+          <div class="spec"><label>Crew</label><span>5</span></div>
+          <div class="spec"><label>Ice Class</label><span>1C</span></div>
+        </div>
+        <div class="ship-itineraries">
+          <h4>Available Itineraries</h4>
+          <ul>
+            <li>Geirangerfjord & Nærøyfjord, 7 nights <span>from £6,950pp</span></li>
+            <li>Lofoten Winter Expedition, 8 nights <span>from £5,400pp</span></li>
+            <li>Hardangerfjord Midnight Sun, 5 nights <span>from £5,900pp</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SY ISFJORD -->
+    <div class="ship-feature reverse fade-in">
+      <img class="ship-img" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=900&q=80" alt="SY Isfjord sailing yacht on calm Nordic waters with forest background" loading="lazy"/>
+      <div class="ship-content">
+        <span class="ship-tag">Archipelago Sailing · Sweden</span>
+        <h2>SY Isfjord</h2>
+        <p class="ship-built">Built Gothenburg, 2004 · Refitted 2020 · 28 metres</p>
+        <p>The SY Isfjord is a traditional ketch-rigged sailing yacht, designed by Swedish naval architect Per Brohäll and built at the Hallberg-Rassy yard in Gothenburg. She is the most manoeuvrable vessel in the fleet, able to navigate shallow channels in the Stockholm and Bohuslän archipelagos that are inaccessible to larger boats.</p>
+        <p>She carries up to four guests in two double cabins. The galley has been upgraded to a full chef's kitchen, and her teak deck has been entirely replaced. She is the only sailing vessel in the fleet — weather permitting, all passages are made under sail.</p>
+        <div class="ship-specs">
+          <div class="spec"><label>Length</label><span>28m</span></div>
+          <div class="spec"><label>Guests</label><span>Up to 4</span></div>
+          <div class="spec"><label>Crew</label><span>3</span></div>
+          <div class="spec"><label>Type</label><span>Ketch</span></div>
+        </div>
+        <div class="ship-itineraries">
+          <h4>Available Itineraries</h4>
+          <ul>
+            <li>Stockholm Archipelago, 7 nights <span>from £4,600pp</span></li>
+            <li>Gothenburg & Bohuslän Coast, 6 nights <span>from £3,800pp</span></li>
+            <li>Hardangerfjord Midnight Sun, 5 nights <span>from £5,900pp</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- MV KVITBJØRN -->
+    <div class="ship-feature fade-in">
+      <img class="ship-img" src="https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=900&q=80" alt="MV Kvitbjørn polar expedition vessel against northern lights and snowy coast" loading="lazy"/>
+      <div class="ship-content">
+        <span class="ship-tag">Arctic Expeditions · Northern Norway</span>
+        <h2>MV Kvitbjørn</h2>
+        <p class="ship-built">Built Tromsø, 1998 · Upgraded 2019 · 44 metres</p>
+        <p>MV Kvitbjørn ("White Bear") is the most robust vessel in the fleet, originally built as a research ship for the University of Tromsø's Arctic biology department. She is ice-strengthened to Class 1B and carries a full complement of Arctic expedition equipment including a RIB launch, inflatable kayaks, and a polar bear watch station on the bow.</p>
+        <p>She accommodates up to eight guests across four cabins. A dedicated equipment room on the lower deck houses cold-weather gear for all guests. A roof observation deck fitted with a retractable windscreen is the finest northern lights viewing platform in the Faraway & Fine fleet.</p>
+        <div class="ship-specs">
+          <div class="spec"><label>Length</label><span>44m</span></div>
+          <div class="spec"><label>Guests</label><span>Up to 8</span></div>
+          <div class="spec"><label>Crew</label><span>6</span></div>
+          <div class="spec"><label>Ice Class</label><span>1B</span></div>
+        </div>
+        <div class="ship-itineraries">
+          <h4>Available Itineraries</h4>
+          <ul>
+            <li>Tromsø Aurora Expedition, 6 nights <span>from £5,400pp</span></li>
+            <li>Lofoten Winter Expedition, 8 nights <span>from £5,200pp</span></li>
+            <li>Svalbard Summer Charter, 10 nights <span>from £11,400pp</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer id="contact">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="../index.html" class="nav-logo" style="text-decoration:none;">Faraway<span style="color:var(--off-white);font-style:italic;"> &amp; Fine</span></a>
+        <p>Faraway & Fine™ is a fictional luxury travel brand created as a test website. No real bookings are taken.</p>
+      </div>
+      <div class="footer-col"><h4>Pages</h4><ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../deals.html">Deals</a></li>
+        <li><a href="../product.html">Experiences</a></li>
+        <li><a href="ships.html">Fleet</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../faq.html">FAQ</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Destinations</h4><ul>
+        <li><a href="../destinations/geirangerfjord.html">Geirangerfjord</a></li>
+        <li><a href="../destinations/tromso.html">Tromsø</a></li>
+        <li><a href="../destinations/stockholm.html">Stockholm</a></li>
+        <li><a href="../destinations/copenhagen.html">Copenhagen</a></li>
+        <li><a href="../destinations/gothenburg.html">Gothenburg</a></li>
+        <li><a href="../destinations/lofoten.html">Lofoten</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Meta</h4><ul>
+        <li><a href="../llms.txt">llms.txt</a></li>
+        <li><a href="../sitemap.xml">Sitemap</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Faraway & Fine™. All content fictional.</p>
+      <p class="footer-note">Test site · LLM discoverability experiment</p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

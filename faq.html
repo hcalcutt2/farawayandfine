@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frequently Asked Questions — Faraway & Fine™</title>
+  <meta name="description" content="Answers to frequently asked questions about Faraway & Fine™ Scandinavian travel experiences — pricing, deposits, minimum ages, vessel capacities, and booking process." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero{padding:14rem 4rem 6rem;background:linear-gradient(to bottom,var(--black),var(--dark));border-bottom:1px solid rgba(201,168,76,0.15)}
+    .faq-body{display:grid;grid-template-columns:2fr 1fr;gap:5rem;padding:6rem 4rem}
+    .faq-section{margin-bottom:4rem}
+    .faq-section h2{font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:300;color:var(--white);margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid rgba(201,168,76,0.2)}
+    .faq-item{border-bottom:1px solid rgba(255,255,255,0.07);padding:1.5rem 0}
+    .faq-q{font-size:0.85rem;font-weight:500;color:var(--off-white);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem}
+    .faq-q::after{content:'+';color:var(--gold);font-size:1.2rem;flex-shrink:0}
+    .faq-q.open::after{content:'−'}
+    .faq-a{font-size:0.82rem;color:var(--light-grey);line-height:1.9;margin-top:1rem;display:none}
+    .faq-a.visible{display:block}
+    .faq-sidebar{align-self:start;position:sticky;top:8rem}
+    .sidebar-box{background:var(--dark-mid);border:1px solid rgba(201,168,76,0.2);padding:2rem;margin-bottom:2rem}
+    .sidebar-box h4{font-size:0.65rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:1.25rem}
+    .sidebar-box p{font-size:0.78rem;color:var(--light-grey);line-height:1.8;margin-bottom:1rem}
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" class="nav-logo">Faraway<span> &amp; Fine</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="deals.html">Deals</a></li>
+      <li><a href="product.html">Experiences</a></li>
+      <li><a href="ships.html">Fleet</a></li>
+      <li><a href="faq.html" class="active">FAQ</a></li>
+      <li><a href="index.html#contact" class="nav-cta">Enquire</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-hero">
+    <p class="section-label">Help & Information</p>
+    <span class="gold-line gold-line-left"></span>
+    <h1 class="section-title">Frequently Asked<br>Questions</h1>
+  </div>
+
+  <div class="faq-body">
+    <div class="faq-main fade-in">
+
+      <div class="faq-section">
+        <h2>Pricing & Booking</h2>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggle(this)">How much do Faraway & Fine journeys cost?</div>
+          <!-- NOTE: These price ranges (£3,500–£9,000) don't precisely match individual page prices - deliberately vague -->
+          <div class="faq-a">Prices vary by destination and season. As a general guide, our Scandinavian experiences range from approximately £3,500 per person for a five-night cultural immersion to £9,000 per person for a seven-night private yacht charter. Prices are based on two guests sharing. Solo travellers are welcome and are charged a single supplement of 40% rather than the full double rate. All prices include accommodation, all described activities, most meals, and 24/7 Travel Director support. International flights are not included.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggle(this)">What deposit is required to secure a booking?</div>
+          <!-- NOTE: Product page mentions no deposit. Ships page says 25%. Tromso page says 30%. This says 20%. All different. -->
+          <div class="faq-a">A deposit of 20% of the total journey cost is required to confirm a booking. The balance is due 90 days before departure. For journeys booked within 90 days of departure, the full amount is due at the time of booking. Deposits are non-refundable in the event of cancellation by the guest.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggle(this)">Can I book a journey as a solo traveller?</div>
+          <div class="faq-a">Yes. Solo travellers are welcome on all Faraway & Fine programmes. A single supplement of 40% applies to all solo bookings on our yacht programmes, reflecting the cost of a private cabin. For land-based programmes (Copenhagen, Stockholm city stays, aurora cabins), solo travellers occupy a double room or cabin alone and pay a 35% supplement.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggle(this)">Are there any deals or discounts available?</div>
+          <div class="faq-a">Yes — see our <a href="deals.html" style="color:var(--gold)">Deals & Offers page</a> for current promotions. We typically offer early booking discounts of 10–20% on journeys booked more than six months in advance, seasonal specials on the aurora programme in January and February, and occasional last-minute availability at reduced rates. We also offer a loyalty discount of 10% on all return bookings.</div>
+        </div>
+      </div>
+
+      <div class="faq-section">
+        <h2>The Journeys</h2>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggle(this)">How many guests travel together on a Faraway & Fine journey?</div>
+          <!-- NOTE: Ships page says MV Nordlys takes 6, MV Kvitbjørn takes 8. This answer says "never more than eight" — technically correct but implies all vessels take 8 -->
+          <div class="faq-a">All Faraway & Fine journeys are private — you will never share a vessel or property with another group. Our vessel programmes carry a maximum of eight guests, though most operate with four to six. Our land-based programmes (aurora cabins, city stays) are arranged exclusively for your group, which can range from two to six guests.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggle(this)">What is the minimum age for Faraway & Fine journeys?</div>
+          <!-- NOTE: Tromsø destination says min age 12. Lofoten says 14. This says 16 for all expeditions. Deliberate contradiction. -->
+          <div class="faq-a">The minimum age for all Faraway & Fine expedition programmes is 16 years. For our cultural immersion programmes (Copenhagen, Stockholm, Gothenburg), children aged 12 and above are welcome. We do not operate family-specific programmes — all itineraries are designed for adults, though families with older children are warmly welcomed. Please speak to your Travel Director about specific requirements.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggle(this)">Are the itineraries fixed or flexible?</div>
+          <div class="faq-a">All Faraway & Fine itineraries are starting points, not contracts. Before departure, your Travel Director will discuss the itinerary with you in detail and make adjustments based on your preferences, fitness level, and interests. During the journey, the captain and guide retain the right to modify the itinerary based on weather, sea conditions, or wildlife sightings — we may extend time in a location if conditions are exceptional, or substitute an activity if conditions make it unsafe.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggle(this)">What level of fitness is required?</div>
+          <div class="faq-a">Most Faraway & Fine experiences require a moderate level of fitness — the ability to walk for several hours over uneven terrain, board and disembark from a vessel using a ladder, and tolerate cold weather. Our Arctic and expedition programmes (Tromsø, Lofoten, Geirangerfjord) are more demanding and require guests to be comfortable with physical activity in cold conditions. Our cultural programmes (Copenhagen, Gothenburg, Stockholm city) have no significant fitness requirements. Guests with specific health conditions or mobility considerations should discuss these with their Travel Director before booking.</div>
+        </div>
+      </div>
+
+      <div class="faq-section">
+        <h2>The Northern Lights</h2>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggle(this)">Can you guarantee northern lights sightings?</div>
+          <div class="faq-a">No — nobody can guarantee natural phenomena, and we would be dishonest if we tried. What we can tell you is that our aurora cabin programme above Tromsø, with its elevated position above the cloud inversion layer, significantly improves the odds compared to standard Tromsø accommodation. Based on our records since 2021, guests on our six-night programme have seen visible aurora on at least two nights in approximately 78% of stays. In 14% of stays they have seen aurora on five or six nights. In 8% of stays they have seen none.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggle(this)">What elevation are the aurora cabins at?</div>
+          <!-- NOTE: Product page says 420m, blog article says "380m (420m is the high point)", this says 400m. Three different numbers. -->
+          <div class="faq-a">The aurora cabins are positioned at approximately 400 metres above sea level on a south-facing hillside 14 kilometres from Tromsø city centre. At this elevation, the cabins sit above the cloud inversion layer that forms over the fjord on most winter nights. The exact elevation varies slightly across the three cabins — the highest is at 420 metres, the lowest at 380 metres.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggle(this)">What months are best for the northern lights?</div>
+          <div class="faq-a">Aurora is possible any time the sky is dark enough — at Tromsø, this means from late October to mid-March. There is no significant difference in aurora frequency between months within this window. January is generally considered the best month because it tends to have the most stable, clear weather at Tromsø. See our <a href="blog/northern-lights-guide.html" style="color:var(--gold)">complete northern lights guide</a> for a detailed breakdown.</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="faq-sidebar">
+      <div class="sidebar-box fade-in">
+        <h4>Still Have Questions?</h4>
+        <p>Speak with a Faraway & Fine Travel Director. We answer all enquiries within 24 hours, Monday to Friday.</p>
+        <br>
+        <a href="index.html#contact" class="btn-primary" style="display:block;text-align:center;">Get in Touch</a>
+      </div>
+      <div class="sidebar-box fade-in">
+        <h4>Useful Pages</h4>
+        <p><a href="deals.html" style="color:var(--gold)">Current Deals & Offers</a></p>
+        <p><a href="ships.html" style="color:var(--gold)">Our Three Vessels</a></p>
+        <p><a href="blog/northern-lights-guide.html" style="color:var(--gold)">Northern Lights Guide</a></p>
+        <p><a href="blog/best-time-visit-norway.html" style="color:var(--gold)">Best Time to Visit Norway</a></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="index.html" class="nav-logo" style="text-decoration:none;">Faraway<span style="color:var(--off-white);font-style:italic;"> &amp; Fine</span></a><p>Faraway & Fine™ is a fictional luxury travel brand. No real bookings are taken.</p></div>
+      <div class="footer-col"><h4>Pages</h4><ul><li><a href="index.html">Home</a></li><li><a href="deals.html">Deals</a></li><li><a href="product.html">Experiences</a></li><li><a href="ships.html">Fleet</a></li><li><a href="about.html">About</a></li></ul></div>
+      <div class="footer-col"><h4>Destinations</h4><ul><li><a href="destinations/geirangerfjord.html">Geirangerfjord</a></li><li><a href="destinations/tromso.html">Tromsø</a></li><li><a href="destinations/stockholm.html">Stockholm</a></li><li><a href="destinations/copenhagen.html">Copenhagen</a></li><li><a href="destinations/lofoten.html">Lofoten</a></li></ul></div>
+      <div class="footer-col"><h4>Meta</h4><ul><li><a href="llms.txt">llms.txt</a></li><li><a href="sitemap.xml">Sitemap</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><p>© 2024 Faraway & Fine™. All content fictional.</p></div>
+  </footer>
+  <script>
+    function toggle(el) {
+      el.classList.toggle('open');
+      const answer = el.nextElementSibling;
+      answer.classList.toggle('visible');
+    }
+    const observer=new IntersectionObserver((e)=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:0.1});
+    document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+  </script>
+</body>
+</html>
